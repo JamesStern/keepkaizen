@@ -29,12 +29,14 @@ PODS:
   - GoogleUtilities (1.3.1):
     - GoogleSymbolUtilities (~> 1.0)
   - SideMenu (2.0.3)
+  - TextFieldEffects (1.3.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - SideMenu
+  - TextFieldEffects
 
 SPEC CHECKSUMS:
   Firebase: 34187200ef4979dbd485c7aa685ef078bf587c86
@@ -47,7 +49,8 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   SideMenu: f179260f85c68ed9b283b4a505600f2e6cbdfb10
+  TextFieldEffects: ef594746f17997c813e07633f8ae5acaf9b04f27
 
-PODFILE CHECKSUM: 7f0da3a2ffc3fc4ba400fc5d614b278a8f0b6be0
+PODFILE CHECKSUM: 441ba514fc38fd297068df72bd70011c3fba2732
 
 COCOAPODS: 1.0.0.rc.1

@@ -7,85 +7,146 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D1B616CEC3136096BE0FBA66A922431 /* SideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8424927CF5BC11404BF4E184CA13AB /* SideMenu-dummy.m */; };
-		104ECCB341D3AB2FA69CB50063C2917D /* SideMenuTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775AAFB445BB87464EBBD26DBEFE25E9 /* SideMenuTransition.swift */; };
-		8225302562728E3CD9445AC4A63337E3 /* UISideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A839A0A987FC1CFE4D8F21FB9E16B5 /* UISideMenuNavigationController.swift */; };
-		86EFEB7042E893E4FE52434DCEEAA99B /* Pods-KeepKaizen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C782C2B10DB5B1F0388B4EFFAB55668 /* Pods-KeepKaizen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9479CD892D6A39D480D3B6B6CFF9D3C0 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D1E142CEBD7B9DC07BA3A777E26A1 /* SideMenuManager.swift */; };
-		A1541C317D13926666C4F1472D58E96F /* SideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96D7C7C7495A533B876DA8622C3984DE /* SideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CCD7B21785A01B2BD04BA2E002D2CB77 /* Pods-KeepKaizen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BADECF562F661BF49828C1DC29A7163 /* Pods-KeepKaizen-dummy.m */; };
-		DF3150A4E1B70B1FCB95009A9824A56F /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BF3A309F31D88175D73D5AE0652F10 /* UITableViewVibrantCell.swift */; };
-		EA686A8C523E4BAF69DA992EC09C6E5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
-		EAAAD5B8A37FDDF8EE6167F0349F5B93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		03CD69D3DF8ECC1C7AB3A525BD5AAE9D /* Pods-KeepKaizen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C782C2B10DB5B1F0388B4EFFAB55668 /* Pods-KeepKaizen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097E09F373AD95D0136F4C6C3631E512 /* SideMenuTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71CCA42D7BF3B6836C11189E310A8A /* SideMenuTransition.swift */; };
+		3313C109CCFF5F88197EEE98D19121B9 /* TextFieldEffects-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED810BBA2B7577948F07519D94DC5B8 /* TextFieldEffects-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C8BA588655417F47F47501F8FF60432 /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96978E41AF54CF68AB99962BA3C8EA46 /* YoshikoTextField.swift */; };
+		3D9FCDC1607AF77B2E31B3B201838E80 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226C033D944893FBCE940B20EE029E40 /* YokoTextField.swift */; };
+		4B7A8EAFBD5B0965555B56BF6A9DF4B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		4F88923747270E35382B48AD6BE5AC10 /* UISideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C1D31CB8F9813B2CF76B4B0EE94634 /* UISideMenuNavigationController.swift */; };
+		581FD495F60E017DAEA57A88EDA9266A /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197D0DABC68176D8E486C6FDCF0CBE88 /* JiroTextField.swift */; };
+		6135A6A652C00E9EFB204838A7857F67 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3247B8B5745C2F3162DC9BD43DCD7D9 /* SideMenuManager.swift */; };
+		62E8F6F339A716098A44ED24E77629B9 /* SideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E83C715CEAD7A326F0556E1337F27B82 /* SideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67158C603683556A24280B3BD063B3BA /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E8B1A7D00FD27EB400D1A778A4DA2 /* HoshiTextField.swift */; };
+		69CC1F5F320E52F56150DCA0FD0B27D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		6E5A7B7E58884B083B759CC00FBAEF40 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07C725484B712E9558497D054AA74B4 /* MinoruTextField.swift */; };
+		79F9401F033FE681F8FF19DA3685E484 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4223DF729262AB1EEBA278719AF374 /* TextFieldsEffects.swift */; };
+		A456B48BEDA621E57DC45BEA774B3687 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D45F4ABA15F5C0B54D5599EB14A72A8 /* AkiraTextField.swift */; };
+		AD1A9F04E1239B9FCC243E8B05CFA53B /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157B588764A6DF9BDAD6DC3ACFB4A892 /* MadokaTextField.swift */; };
+		B5DD5FCD540528F717A91121BCC64703 /* Pods-KeepKaizen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BADECF562F661BF49828C1DC29A7163 /* Pods-KeepKaizen-dummy.m */; };
+		BB755AEBCA7528F768FA073DD41F4CD3 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA555990725ADE93EE8B3CB59C1A71B /* KaedeTextField.swift */; };
+		BF93E8CF8760F5C8D9955D8836CD2846 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8909C1A8A2A4052A01ACD97816F68C5 /* UITableViewVibrantCell.swift */; };
+		D2357314852F87FC7B2C5F14A1D0C1CF /* TextFieldEffects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA6C6795636E2AB19AD0544E0FE954 /* TextFieldEffects-dummy.m */; };
+		E6D075B29F9DE587DAE165DAD1AF1225 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		F637AF085DDE3F2B760F8399CFC13A74 /* SideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC401EC339EA757DDC4BDD3C81FAD7AE /* SideMenu-dummy.m */; };
+		F8731A826564CC64DF88CFE118024D6E /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C824FF0F9E220612FF4827DD13AE4F7 /* IsaoTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		17923E40DAE9F4FA7199D186742FED11 /* PBXContainerItemProxy */ = {
+		337CD9BAC558AA4C4CA592B2F225C5E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F648F9A1762FD6D8A753CB677C032350;
+			remoteGlobalIDString = 392E85E4DE8AB8AE00D1C09D0BB3AEA3;
 			remoteInfo = SideMenu;
+		};
+		CC0B5B5A5092BB25D12E31FB526C4CE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECCDFB83EB9E98365F9AA88F717932AC;
+			remoteInfo = TextFieldEffects;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		07C947BD42C3A1F2FCC149F82519868A /* Pods-KeepKaizen-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KeepKaizen-acknowledgements.plist"; sourceTree = "<group>"; };
-		0882FD710AA4189E37C3A39311522195 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		08169554A8B1E4E49AC60BDBB0DF85E4 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
 		0BADECF562F661BF49828C1DC29A7163 /* Pods-KeepKaizen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KeepKaizen-dummy.m"; sourceTree = "<group>"; };
-		1A1B20FF82B8E2F995DF185C9FF368C5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C824FF0F9E220612FF4827DD13AE4F7 /* IsaoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IsaoTextField.swift; path = TextFieldEffects/TextFieldEffects/IsaoTextField.swift; sourceTree = "<group>"; };
+		0EDD5B39286102DB5AE3CCCD9BD3801B /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		157B588764A6DF9BDAD6DC3ACFB4A892 /* MadokaTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MadokaTextField.swift; path = TextFieldEffects/TextFieldEffects/MadokaTextField.swift; sourceTree = "<group>"; };
+		197D0DABC68176D8E486C6FDCF0CBE88 /* JiroTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiroTextField.swift; path = TextFieldEffects/TextFieldEffects/JiroTextField.swift; sourceTree = "<group>"; };
 		1BA95D88B40D3D4A5B27507B26AC0F7B /* Pods-KeepKaizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeepKaizen.release.xcconfig"; sourceTree = "<group>"; };
 		1C782C2B10DB5B1F0388B4EFFAB55668 /* Pods-KeepKaizen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KeepKaizen-umbrella.h"; sourceTree = "<group>"; };
-		21154644BE2A4E22726E67C3413AF7FC /* SideMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SideMenu.modulemap; sourceTree = "<group>"; };
+		21C1D31CB8F9813B2CF76B4B0EE94634 /* UISideMenuNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISideMenuNavigationController.swift; path = Pod/Classes/UISideMenuNavigationController.swift; sourceTree = "<group>"; };
+		226C033D944893FBCE940B20EE029E40 /* YokoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YokoTextField.swift; path = TextFieldEffects/TextFieldEffects/YokoTextField.swift; sourceTree = "<group>"; };
+		22C35B8BF61E616CE06F69BD212775B5 /* TextFieldEffects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TextFieldEffects-prefix.pch"; sourceTree = "<group>"; };
 		27F1974A5739F1ECC986D486C6DE9254 /* Pods-KeepKaizen-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KeepKaizen-frameworks.sh"; sourceTree = "<group>"; };
-		2E2FE8135543EAF2F5832073895F990D /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
-		391882D32B2562A4550D2541C35D9A30 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
 		3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3F4F5B82ECAD89EC54828592A76FF9E0 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
-		42BEFA109ECECBD01B5C43418552500E /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Analytics/Sources/Firebase.h; sourceTree = "<group>"; };
-		46D56EAE9DCC1BC635E05B3D2D55219C /* Pods_KeepKaizen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepKaizen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A2A70D0B3CA47639B383373FBDA1515 /* SideMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenu.xcconfig; sourceTree = "<group>"; };
+		41946E8E0DC50E5E778ABFA2482B5C3E /* SideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-prefix.pch"; sourceTree = "<group>"; };
+		49294E74B4331EFE785CC1929F4FE726 /* SideMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SideMenu.modulemap; sourceTree = "<group>"; };
 		4D470CCA7DD7369AA522D0F3CA73E07D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59BF3A309F31D88175D73D5AE0652F10 /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewVibrantCell.swift; path = Pod/Classes/UITableViewVibrantCell.swift; sourceTree = "<group>"; };
-		5FE197E32AEE254BD271681918B84648 /* SideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-prefix.pch"; sourceTree = "<group>"; };
-		61B606135ABB755696DDB9821B67C7FD /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		4DAA6C6795636E2AB19AD0544E0FE954 /* TextFieldEffects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TextFieldEffects-dummy.m"; sourceTree = "<group>"; };
+		525294FFB8472BC0DCAB1ED85C6231E7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58966DEEF06E46F50FAC0C970DB0E545 /* TextFieldEffects.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TextFieldEffects.modulemap; sourceTree = "<group>"; };
+		5F10E57F92A90AAA760078FDF22F3A73 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		603B5E69A6173B22E5D6BED4710190EA /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
 		6579F6E983509B1C639F9BE4D44CCA4C /* Pods-KeepKaizen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KeepKaizen.modulemap"; sourceTree = "<group>"; };
-		775AAFB445BB87464EBBD26DBEFE25E9 /* SideMenuTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuTransition.swift; path = Pod/Classes/SideMenuTransition.swift; sourceTree = "<group>"; };
-		7A7A00B845833EFCFB8C956B63E3D1DB /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		6D45F4ABA15F5C0B54D5599EB14A72A8 /* AkiraTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AkiraTextField.swift; path = TextFieldEffects/TextFieldEffects/AkiraTextField.swift; sourceTree = "<group>"; };
+		6ED810BBA2B7577948F07519D94DC5B8 /* TextFieldEffects-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TextFieldEffects-umbrella.h"; sourceTree = "<group>"; };
+		766304125E1D25D3B157F078E6020EAC /* TextFieldEffects.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TextFieldEffects.xcconfig; sourceTree = "<group>"; };
+		77FA11B4119A3606D1F42AF0269C4FB6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A569B2E2E62F9E49DE63DFA49832CED /* Pods_KeepKaizen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepKaizen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		816E8B1A7D00FD27EB400D1A778A4DA2 /* HoshiTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HoshiTextField.swift; path = TextFieldEffects/TextFieldEffects/HoshiTextField.swift; sourceTree = "<group>"; };
 		8BCDF641ECC0628E237BC7E1FA802F7C /* Pods-KeepKaizen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeepKaizen.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		943E29215442E524C0C866BDA327926B /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		96D7C7C7495A533B876DA8622C3984DE /* SideMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-umbrella.h"; sourceTree = "<group>"; };
-		974BF3607ABAA2A88664EE7A1D596BFC /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD8424927CF5BC11404BF4E184CA13AB /* SideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenu-dummy.m"; sourceTree = "<group>"; };
-		C293E876B740233CB70331174BDE3EC3 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		96978E41AF54CF68AB99962BA3C8EA46 /* YoshikoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YoshikoTextField.swift; path = TextFieldEffects/TextFieldEffects/YoshikoTextField.swift; sourceTree = "<group>"; };
+		995E5986D69F5ACC9C8ED33406ADFB33 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
+		A9AB798FF5BB91BBE55CBAB2CF722777 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		AC401EC339EA757DDC4BDD3C81FAD7AE /* SideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenu-dummy.m"; sourceTree = "<group>"; };
+		ADA555990725ADE93EE8B3CB59C1A71B /* KaedeTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaedeTextField.swift; path = TextFieldEffects/TextFieldEffects/KaedeTextField.swift; sourceTree = "<group>"; };
+		AEB51A6D575094E9DC9BED6739D36813 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		B0F0AF8E63D61BF653903AFBC1B21203 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		B3A6166B8EF2F56B340CBD4AF280E605 /* TextFieldEffects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextFieldEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8909C1A8A2A4052A01ACD97816F68C5 /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewVibrantCell.swift; path = Pod/Classes/UITableViewVibrantCell.swift; sourceTree = "<group>"; };
+		BDA6D5BC0C29361A856FBCCF48D3D211 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		C14782298834327F3F51A4FAB097578E /* SideMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenu.xcconfig; sourceTree = "<group>"; };
 		C5E44DD4583E5710984A8B7B3D0547AF /* Pods-KeepKaizen-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KeepKaizen-resources.sh"; sourceTree = "<group>"; };
+		C7DFE583151FFBD4D1612A3FD80F7061 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Analytics/Sources/Firebase.h; sourceTree = "<group>"; };
 		C9D263B16C23487C3B970522F893A862 /* Pods-KeepKaizen-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KeepKaizen-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D14D1E142CEBD7B9DC07BA3A777E26A1 /* SideMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuManager.swift; path = Pod/Classes/SideMenuManager.swift; sourceTree = "<group>"; };
-		E0A839A0A987FC1CFE4D8F21FB9E16B5 /* UISideMenuNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISideMenuNavigationController.swift; path = Pod/Classes/UISideMenuNavigationController.swift; sourceTree = "<group>"; };
-		FCC667346288F0442A4B8A02A76569AB /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		D07C725484B712E9558497D054AA74B4 /* MinoruTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MinoruTextField.swift; path = TextFieldEffects/TextFieldEffects/MinoruTextField.swift; sourceTree = "<group>"; };
+		D3247B8B5745C2F3162DC9BD43DCD7D9 /* SideMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuManager.swift; path = Pod/Classes/SideMenuManager.swift; sourceTree = "<group>"; };
+		E83C715CEAD7A326F0556E1337F27B82 /* SideMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-umbrella.h"; sourceTree = "<group>"; };
+		EA4223DF729262AB1EEBA278719AF374 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFieldsEffects.swift; path = TextFieldEffects/TextFieldEffects/TextFieldsEffects.swift; sourceTree = "<group>"; };
+		EA71CCA42D7BF3B6836C11189E310A8A /* SideMenuTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuTransition.swift; path = Pod/Classes/SideMenuTransition.swift; sourceTree = "<group>"; };
+		F2263133FEA5F500B278C6BF0F3E3B20 /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		33B4866DDABC6D427E00EE790605AE0C /* Frameworks */ = {
+		84643DC925A8ECAAA05B2ADD3B1B208F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA686A8C523E4BAF69DA992EC09C6E5A /* Foundation.framework in Frameworks */,
+				E6D075B29F9DE587DAE165DAD1AF1225 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		813890E351DE26D7C4539973D62BA070 /* Frameworks */ = {
+		EC56DB3287493D503B9309AF674CBA29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAAAD5B8A37FDDF8EE6167F0349F5B93 /* Foundation.framework in Frameworks */,
+				69CC1F5F320E52F56150DCA0FD0B27D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F92D17466ED2F5BC00B9924072E2EA08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B7A8EAFBD5B0965555B56BF6A9DF4B3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08903BDD46D26D16C787F496C4517E44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0F0AF8E63D61BF653903AFBC1B21203 /* FirebaseDatabase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		110B83D232001103AAED97705205EE4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				995E5986D69F5ACC9C8ED33406ADFB33 /* FirebaseAuth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		112C7921E3A497328D11F4930CBBC9CA /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,51 +155,12 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		1E0D68AFA042D507740849558EE1D441 /* Support Files */ = {
+		1C9E597355ED52D597C67052791EAAD7 /* FirebaseDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				1A1B20FF82B8E2F995DF185C9FF368C5 /* Info.plist */,
-				21154644BE2A4E22726E67C3413AF7FC /* SideMenu.modulemap */,
-				4A2A70D0B3CA47639B383373FBDA1515 /* SideMenu.xcconfig */,
-				AD8424927CF5BC11404BF4E184CA13AB /* SideMenu-dummy.m */,
-				5FE197E32AEE254BD271681918B84648 /* SideMenu-prefix.pch */,
-				96D7C7C7495A533B876DA8622C3984DE /* SideMenu-umbrella.h */,
+				08903BDD46D26D16C787F496C4517E44 /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SideMenu";
-			sourceTree = "<group>";
-		};
-		21ADBA418BF1B527D01B7F63DD5F22D2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				61B606135ABB755696DDB9821B67C7FD /* FirebaseInstanceID.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		299D6F32F35506D9E8A3E316901E07D0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				46D56EAE9DCC1BC635E05B3D2D55219C /* Pods_KeepKaizen.framework */,
-				974BF3607ABAA2A88664EE7A1D596BFC /* SideMenu.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3222C25C4CE2CC29BC447F6B077D5C8D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				391882D32B2562A4550D2541C35D9A30 /* GoogleNetworkingUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		357FAC1A0E969C1D79626E8737E78AAA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				943E29215442E524C0C866BDA327926B /* GoogleSymbolUtilities.framework */,
-			);
-			name = Frameworks;
+			path = FirebaseDatabase;
 			sourceTree = "<group>";
 		};
 		393F5C631E6EEE3C70F7E1EA335327DE /* Pods-KeepKaizen */ = {
@@ -159,20 +181,60 @@
 			path = "Target Support Files/Pods-KeepKaizen";
 			sourceTree = "<group>";
 		};
-		50DBB49DA46D25EF89C5A469ED017586 /* Frameworks */ = {
+		3ECB9953727DD6F77FAA8AF316476CB9 /* GoogleInterchangeUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				2E2FE8135543EAF2F5832073895F990D /* FirebaseAuth.framework */,
+				6DC585A28CEDB6220F6B42AF090C54DB /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		48B170D851DE7980B88317077F0DC270 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				525294FFB8472BC0DCAB1ED85C6231E7 /* Info.plist */,
+				58966DEEF06E46F50FAC0C970DB0E545 /* TextFieldEffects.modulemap */,
+				766304125E1D25D3B157F078E6020EAC /* TextFieldEffects.xcconfig */,
+				4DAA6C6795636E2AB19AD0544E0FE954 /* TextFieldEffects-dummy.m */,
+				22C35B8BF61E616CE06F69BD212775B5 /* TextFieldEffects-prefix.pch */,
+				6ED810BBA2B7577948F07519D94DC5B8 /* TextFieldEffects-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TextFieldEffects";
+			sourceTree = "<group>";
+		};
+		491777B32ADCB30B0810344EA6A1C203 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EDD5B39286102DB5AE3CCCD9BD3801B /* FirebaseAnalytics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		57ED68AAFA4ADD5D45FA6EC11709A61F /* GoogleNetworkingUtilities */ = {
+		4AAA9B29DB3CB14EC417F51B80CD3A3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3222C25C4CE2CC29BC447F6B077D5C8D /* Frameworks */,
+				08169554A8B1E4E49AC60BDBB0DF85E4 /* GoogleNetworkingUtilities.framework */,
 			);
-			path = GoogleNetworkingUtilities;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54E3CDA5C92CFDA58455FEE3A1551B64 /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				6D45F4ABA15F5C0B54D5599EB14A72A8 /* AkiraTextField.swift */,
+				816E8B1A7D00FD27EB400D1A778A4DA2 /* HoshiTextField.swift */,
+				0C824FF0F9E220612FF4827DD13AE4F7 /* IsaoTextField.swift */,
+				197D0DABC68176D8E486C6FDCF0CBE88 /* JiroTextField.swift */,
+				ADA555990725ADE93EE8B3CB59C1A71B /* KaedeTextField.swift */,
+				157B588764A6DF9BDAD6DC3ACFB4A892 /* MadokaTextField.swift */,
+				D07C725484B712E9558497D054AA74B4 /* MinoruTextField.swift */,
+				EA4223DF729262AB1EEBA278719AF374 /* TextFieldsEffects.swift */,
+				226C033D944893FBCE940B20EE029E40 /* YokoTextField.swift */,
+				96978E41AF54CF68AB99962BA3C8EA46 /* YoshikoTextField.swift */,
+				48B170D851DE7980B88317077F0DC270 /* Support Files */,
+			);
+			path = TextFieldEffects;
 			sourceTree = "<group>";
 		};
 		60DB66C0794D7889AE427B5DA32184BF /* Targets Support Files */ = {
@@ -183,11 +245,19 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		626F79AE38F3B133F5DF3E6073A967E7 /* FirebaseInstanceID */ = {
+		6DC585A28CEDB6220F6B42AF090C54DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7A7A00B845833EFCFB8C956B63E3D1DB /* FIRInstanceID.h */,
-				21ADBA418BF1B527D01B7F63DD5F22D2 /* Frameworks */,
+				603B5E69A6173B22E5D6BED4710190EA /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78DCAD15E49603C3018CD1765F1DB8F2 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				5F10E57F92A90AAA760078FDF22F3A73 /* FIRInstanceID.h */,
+				B42B9490161DF5718D90B8055CACFD1E /* Frameworks */,
 			);
 			path = FirebaseInstanceID;
 			sourceTree = "<group>";
@@ -197,71 +267,80 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				B841DD5AFF3088238DCDCA0605C16337 /* Pods */,
-				299D6F32F35506D9E8A3E316901E07D0 /* Products */,
+				E5DA6FDCE9B279D3E6941DD613C29097 /* Pods */,
+				7EFF99378EA7EED85B1D968C159484F5 /* Products */,
 				60DB66C0794D7889AE427B5DA32184BF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7E298CDAFB0138A920F3183C3A8D9782 /* Frameworks */ = {
+		7EFF99378EA7EED85B1D968C159484F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C293E876B740233CB70331174BDE3EC3 /* GoogleInterchangeUtilities.framework */,
+				7A569B2E2E62F9E49DE63DFA49832CED /* Pods_KeepKaizen.framework */,
+				F2263133FEA5F500B278C6BF0F3E3B20 /* SideMenu.framework */,
+				B3A6166B8EF2F56B340CBD4AF280E605 /* TextFieldEffects.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		804AD278B6F0858C72A579381CADFD43 /* GoogleNetworkingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				4AAA9B29DB3CB14EC417F51B80CD3A3D /* Frameworks */,
+			);
+			path = GoogleNetworkingUtilities;
+			sourceTree = "<group>";
+		};
+		85830FA3E2EEA88D00C9ABBBB435F934 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDA6D5BC0C29361A856FBCCF48D3D211 /* GoogleUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		82E920021BB62EEC8495B9EA400E41D8 /* GoogleUtilities */ = {
+		9EA8CF4394D11D923A417B4D7493BA85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ECF7C8C456FA62FC3FB9C8E0BA043F98 /* Frameworks */,
-			);
-			path = GoogleUtilities;
-			sourceTree = "<group>";
-		};
-		87F2D153551D99EBE354ACF3C35F3983 /* SideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				D14D1E142CEBD7B9DC07BA3A777E26A1 /* SideMenuManager.swift */,
-				775AAFB445BB87464EBBD26DBEFE25E9 /* SideMenuTransition.swift */,
-				E0A839A0A987FC1CFE4D8F21FB9E16B5 /* UISideMenuNavigationController.swift */,
-				59BF3A309F31D88175D73D5AE0652F10 /* UITableViewVibrantCell.swift */,
-				1E0D68AFA042D507740849558EE1D441 /* Support Files */,
-			);
-			path = SideMenu;
-			sourceTree = "<group>";
-		};
-		8FC3E1F7F36ADFCD49653C6BDC3734FF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0882FD710AA4189E37C3A39311522195 /* FirebaseAnalytics.framework */,
+				A9AB798FF5BB91BBE55CBAB2CF722777 /* GoogleSymbolUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		91769C6383B6DA0558AF68E8DC3CEAF8 /* Analytics */ = {
+		A23346D46297487FCD339962B2BB7797 /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				42BEFA109ECECBD01B5C43418552500E /* Firebase.h */,
+				491777B32ADCB30B0810344EA6A1C203 /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		B295C57B78930A3657D4FB33A66E2B74 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				C7DFE583151FFBD4D1612A3FD80F7061 /* Firebase.h */,
 			);
 			name = Analytics;
 			sourceTree = "<group>";
 		};
-		B841DD5AFF3088238DCDCA0605C16337 /* Pods */ = {
+		B42B9490161DF5718D90B8055CACFD1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D01D4E6E808193A0E2A21B08CE13099B /* Firebase */,
-				C963C35BFD18B0F0414F8DA43925F064 /* FirebaseAnalytics */,
-				FA93E941FCE7265DBD28D446D902633D /* FirebaseAuth */,
-				C1C70657680821F016EE59722F773B5E /* FirebaseDatabase */,
-				626F79AE38F3B133F5DF3E6073A967E7 /* FirebaseInstanceID */,
-				D7B55B4061B42FB98B60C654A6F30948 /* GoogleInterchangeUtilities */,
-				57ED68AAFA4ADD5D45FA6EC11709A61F /* GoogleNetworkingUtilities */,
-				C069A5CF208D25A1C798AF390CC5039A /* GoogleSymbolUtilities */,
-				82E920021BB62EEC8495B9EA400E41D8 /* GoogleUtilities */,
-				87F2D153551D99EBE354ACF3C35F3983 /* SideMenu */,
+				AEB51A6D575094E9DC9BED6739D36813 /* FirebaseInstanceID.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBAA0F865A81477E6673504BEB6D9026 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D3247B8B5745C2F3162DC9BD43DCD7D9 /* SideMenuManager.swift */,
+				EA71CCA42D7BF3B6836C11189E310A8A /* SideMenuTransition.swift */,
+				21C1D31CB8F9813B2CF76B4B0EE94634 /* UISideMenuNavigationController.swift */,
+				B8909C1A8A2A4052A01ACD97816F68C5 /* UITableViewVibrantCell.swift */,
+				E3579B9F0296284F8ED5CEA01EEAA2E4 /* Support Files */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -272,117 +351,107 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C069A5CF208D25A1C798AF390CC5039A /* GoogleSymbolUtilities */ = {
+		CD8406BCB0B30FFF37A273CCE9250679 /* GoogleSymbolUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				357FAC1A0E969C1D79626E8737E78AAA /* Frameworks */,
+				9EA8CF4394D11D923A417B4D7493BA85 /* Frameworks */,
 			);
 			path = GoogleSymbolUtilities;
 			sourceTree = "<group>";
 		};
-		C1C70657680821F016EE59722F773B5E /* FirebaseDatabase */ = {
+		CF41D2A710D81D524439B05311E481B8 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				F63BA0DB8AC2A0A8614368DDFF3E6F3C /* Frameworks */,
-			);
-			path = FirebaseDatabase;
-			sourceTree = "<group>";
-		};
-		C963C35BFD18B0F0414F8DA43925F064 /* FirebaseAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				8FC3E1F7F36ADFCD49653C6BDC3734FF /* Frameworks */,
-			);
-			path = FirebaseAnalytics;
-			sourceTree = "<group>";
-		};
-		D01D4E6E808193A0E2A21B08CE13099B /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				91769C6383B6DA0558AF68E8DC3CEAF8 /* Analytics */,
+				B295C57B78930A3657D4FB33A66E2B74 /* Analytics */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		D7B55B4061B42FB98B60C654A6F30948 /* GoogleInterchangeUtilities */ = {
+		D7A6BB0D19DEE9F95B24F90F8377E1CF /* GoogleUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				7E298CDAFB0138A920F3183C3A8D9782 /* Frameworks */,
+				85830FA3E2EEA88D00C9ABBBB435F934 /* Frameworks */,
 			);
-			path = GoogleInterchangeUtilities;
+			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
-		ECF7C8C456FA62FC3FB9C8E0BA043F98 /* Frameworks */ = {
+		DAB4BB086EF8C99838982E89CE927E99 /* FirebaseAuth */ = {
 			isa = PBXGroup;
 			children = (
-				FCC667346288F0442A4B8A02A76569AB /* GoogleUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F63BA0DB8AC2A0A8614368DDFF3E6F3C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3F4F5B82ECAD89EC54828592A76FF9E0 /* FirebaseDatabase.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FA93E941FCE7265DBD28D446D902633D /* FirebaseAuth */ = {
-			isa = PBXGroup;
-			children = (
-				50DBB49DA46D25EF89C5A469ED017586 /* Frameworks */,
+				110B83D232001103AAED97705205EE4B /* Frameworks */,
 			);
 			path = FirebaseAuth;
+			sourceTree = "<group>";
+		};
+		E3579B9F0296284F8ED5CEA01EEAA2E4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77FA11B4119A3606D1F42AF0269C4FB6 /* Info.plist */,
+				49294E74B4331EFE785CC1929F4FE726 /* SideMenu.modulemap */,
+				C14782298834327F3F51A4FAB097578E /* SideMenu.xcconfig */,
+				AC401EC339EA757DDC4BDD3C81FAD7AE /* SideMenu-dummy.m */,
+				41946E8E0DC50E5E778ABFA2482B5C3E /* SideMenu-prefix.pch */,
+				E83C715CEAD7A326F0556E1337F27B82 /* SideMenu-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SideMenu";
+			sourceTree = "<group>";
+		};
+		E5DA6FDCE9B279D3E6941DD613C29097 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF41D2A710D81D524439B05311E481B8 /* Firebase */,
+				A23346D46297487FCD339962B2BB7797 /* FirebaseAnalytics */,
+				DAB4BB086EF8C99838982E89CE927E99 /* FirebaseAuth */,
+				1C9E597355ED52D597C67052791EAAD7 /* FirebaseDatabase */,
+				78DCAD15E49603C3018CD1765F1DB8F2 /* FirebaseInstanceID */,
+				3ECB9953727DD6F77FAA8AF316476CB9 /* GoogleInterchangeUtilities */,
+				804AD278B6F0858C72A579381CADFD43 /* GoogleNetworkingUtilities */,
+				CD8406BCB0B30FFF37A273CCE9250679 /* GoogleSymbolUtilities */,
+				D7A6BB0D19DEE9F95B24F90F8377E1CF /* GoogleUtilities */,
+				BBAA0F865A81477E6673504BEB6D9026 /* SideMenu */,
+				54E3CDA5C92CFDA58455FEE3A1551B64 /* TextFieldEffects */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1693BD4E7B1A54B8E80CE7C4FADC4AA8 /* Headers */ = {
+		35A83D067B0086F4F64FC1A86E81D991 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1541C317D13926666C4F1472D58E96F /* SideMenu-umbrella.h in Headers */,
+				3313C109CCFF5F88197EEE98D19121B9 /* TextFieldEffects-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0728C16F5F07576F84D325288ACD8C8 /* Headers */ = {
+		57535BBCAD1A25C1A0136EB87E542745 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86EFEB7042E893E4FE52434DCEEAA99B /* Pods-KeepKaizen-umbrella.h in Headers */,
+				03CD69D3DF8ECC1C7AB3A525BD5AAE9D /* Pods-KeepKaizen-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B429A7368E331357F40814D95F09DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62E8F6F339A716098A44ED24E77629B9 /* SideMenu-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		62607A0015F5A8E8D16C40700879B84A /* Pods-KeepKaizen */ = {
+		392E85E4DE8AB8AE00D1C09D0BB3AEA3 /* SideMenu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0629A7C8074C0967E713FE06E83044A5 /* Build configuration list for PBXNativeTarget "Pods-KeepKaizen" */;
+			buildConfigurationList = CA7DC62621F34BC2113F6181CF970B2B /* Build configuration list for PBXNativeTarget "SideMenu" */;
 			buildPhases = (
-				6859581FCEA4A78F44E297E41934F7A6 /* Sources */,
-				813890E351DE26D7C4539973D62BA070 /* Frameworks */,
-				B0728C16F5F07576F84D325288ACD8C8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				02ECA66A18CC3C9358D92D4676865A7E /* PBXTargetDependency */,
-			);
-			name = "Pods-KeepKaizen";
-			productName = "Pods-KeepKaizen";
-			productReference = 46D56EAE9DCC1BC635E05B3D2D55219C /* Pods_KeepKaizen.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F648F9A1762FD6D8A753CB677C032350 /* SideMenu */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A967C4D64BCE264164E44C7605F589F9 /* Build configuration list for PBXNativeTarget "SideMenu" */;
-			buildPhases = (
-				67D55EFD9599916EC1653788FCAE442A /* Sources */,
-				33B4866DDABC6D427E00EE790605AE0C /* Frameworks */,
-				1693BD4E7B1A54B8E80CE7C4FADC4AA8 /* Headers */,
+				D13C94C05172ADF39456FF09C6370D43 /* Sources */,
+				EC56DB3287493D503B9309AF674CBA29 /* Frameworks */,
+				A4B429A7368E331357F40814D95F09DD /* Headers */,
 			);
 			buildRules = (
 			);
@@ -390,7 +459,43 @@
 			);
 			name = SideMenu;
 			productName = SideMenu;
-			productReference = 974BF3607ABAA2A88664EE7A1D596BFC /* SideMenu.framework */;
+			productReference = F2263133FEA5F500B278C6BF0F3E3B20 /* SideMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A281E7E91937458D8B36DD7D4F85962E /* Pods-KeepKaizen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 459C5DE46A7308C65029C2533DBA2314 /* Build configuration list for PBXNativeTarget "Pods-KeepKaizen" */;
+			buildPhases = (
+				0E74275196942E8D4E251F2EFF6FA659 /* Sources */,
+				F92D17466ED2F5BC00B9924072E2EA08 /* Frameworks */,
+				57535BBCAD1A25C1A0136EB87E542745 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63AA86C01580EFBEDD85D5FF89AAC40F /* PBXTargetDependency */,
+				2DCCF62E118078DEF8FB6276B669037D /* PBXTargetDependency */,
+			);
+			name = "Pods-KeepKaizen";
+			productName = "Pods-KeepKaizen";
+			productReference = 7A569B2E2E62F9E49DE63DFA49832CED /* Pods_KeepKaizen.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ECCDFB83EB9E98365F9AA88F717932AC /* TextFieldEffects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA92888A49CDAD1E45786E09CD3EAF1D /* Build configuration list for PBXNativeTarget "TextFieldEffects" */;
+			buildPhases = (
+				8237B00F2F32466A2E8C9BB022C2E18F /* Sources */,
+				84643DC925A8ECAAA05B2ADD3B1B208F /* Frameworks */,
+				35A83D067B0086F4F64FC1A86E81D991 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextFieldEffects;
+			productName = TextFieldEffects;
+			productReference = B3A6166B8EF2F56B340CBD4AF280E605 /* TextFieldEffects.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -402,10 +507,13 @@
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
-					62607A0015F5A8E8D16C40700879B84A = {
+					392E85E4DE8AB8AE00D1C09D0BB3AEA3 = {
 						LastSwiftMigration = 0800;
 					};
-					F648F9A1762FD6D8A753CB677C032350 = {
+					A281E7E91937458D8B36DD7D4F85962E = {
+						LastSwiftMigration = 0800;
+					};
+					ECCDFB83EB9E98365F9AA88F717932AC = {
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -418,52 +526,111 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 299D6F32F35506D9E8A3E316901E07D0 /* Products */;
+			productRefGroup = 7EFF99378EA7EED85B1D968C159484F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				62607A0015F5A8E8D16C40700879B84A /* Pods-KeepKaizen */,
-				F648F9A1762FD6D8A753CB677C032350 /* SideMenu */,
+				A281E7E91937458D8B36DD7D4F85962E /* Pods-KeepKaizen */,
+				392E85E4DE8AB8AE00D1C09D0BB3AEA3 /* SideMenu */,
+				ECCDFB83EB9E98365F9AA88F717932AC /* TextFieldEffects */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		67D55EFD9599916EC1653788FCAE442A /* Sources */ = {
+		0E74275196942E8D4E251F2EFF6FA659 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D1B616CEC3136096BE0FBA66A922431 /* SideMenu-dummy.m in Sources */,
-				9479CD892D6A39D480D3B6B6CFF9D3C0 /* SideMenuManager.swift in Sources */,
-				104ECCB341D3AB2FA69CB50063C2917D /* SideMenuTransition.swift in Sources */,
-				8225302562728E3CD9445AC4A63337E3 /* UISideMenuNavigationController.swift in Sources */,
-				DF3150A4E1B70B1FCB95009A9824A56F /* UITableViewVibrantCell.swift in Sources */,
+				B5DD5FCD540528F717A91121BCC64703 /* Pods-KeepKaizen-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6859581FCEA4A78F44E297E41934F7A6 /* Sources */ = {
+		8237B00F2F32466A2E8C9BB022C2E18F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCD7B21785A01B2BD04BA2E002D2CB77 /* Pods-KeepKaizen-dummy.m in Sources */,
+				A456B48BEDA621E57DC45BEA774B3687 /* AkiraTextField.swift in Sources */,
+				67158C603683556A24280B3BD063B3BA /* HoshiTextField.swift in Sources */,
+				F8731A826564CC64DF88CFE118024D6E /* IsaoTextField.swift in Sources */,
+				581FD495F60E017DAEA57A88EDA9266A /* JiroTextField.swift in Sources */,
+				BB755AEBCA7528F768FA073DD41F4CD3 /* KaedeTextField.swift in Sources */,
+				AD1A9F04E1239B9FCC243E8B05CFA53B /* MadokaTextField.swift in Sources */,
+				6E5A7B7E58884B083B759CC00FBAEF40 /* MinoruTextField.swift in Sources */,
+				D2357314852F87FC7B2C5F14A1D0C1CF /* TextFieldEffects-dummy.m in Sources */,
+				79F9401F033FE681F8FF19DA3685E484 /* TextFieldsEffects.swift in Sources */,
+				3D9FCDC1607AF77B2E31B3B201838E80 /* YokoTextField.swift in Sources */,
+				3C8BA588655417F47F47501F8FF60432 /* YoshikoTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D13C94C05172ADF39456FF09C6370D43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F637AF085DDE3F2B760F8399CFC13A74 /* SideMenu-dummy.m in Sources */,
+				6135A6A652C00E9EFB204838A7857F67 /* SideMenuManager.swift in Sources */,
+				097E09F373AD95D0136F4C6C3631E512 /* SideMenuTransition.swift in Sources */,
+				4F88923747270E35382B48AD6BE5AC10 /* UISideMenuNavigationController.swift in Sources */,
+				BF93E8CF8760F5C8D9955D8836CD2846 /* UITableViewVibrantCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		02ECA66A18CC3C9358D92D4676865A7E /* PBXTargetDependency */ = {
+		2DCCF62E118078DEF8FB6276B669037D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TextFieldEffects;
+			target = ECCDFB83EB9E98365F9AA88F717932AC /* TextFieldEffects */;
+			targetProxy = CC0B5B5A5092BB25D12E31FB526C4CE1 /* PBXContainerItemProxy */;
+		};
+		63AA86C01580EFBEDD85D5FF89AAC40F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SideMenu;
-			target = F648F9A1762FD6D8A753CB677C032350 /* SideMenu */;
-			targetProxy = 17923E40DAE9F4FA7199D186742FED11 /* PBXContainerItemProxy */;
+			target = 392E85E4DE8AB8AE00D1C09D0BB3AEA3 /* SideMenu */;
+			targetProxy = 337CD9BAC558AA4C4CA592B2F225C5E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1F1D92ED3C431AB84DB6625F8BBF2815 /* Release */ = {
+		43065F3169977DEDC6CD30591E139AED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A2A70D0B3CA47639B383373FBDA1515 /* SideMenu.xcconfig */;
+			baseConfigurationReference = 1BA95D88B40D3D4A5B27507B26AC0F7B /* Pods-KeepKaizen.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KeepKaizen/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KeepKaizen/Pods-KeepKaizen.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_KeepKaizen;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		458D724924438BF58041B21495FAB2E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C14782298834327F3F51A4FAB097578E /* SideMenu.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -491,40 +658,35 @@
 			};
 			name = Release;
 		};
-		63E39FE89D7FBF73F958A7CB25E0A828 /* Debug */ = {
+		54601A52BC18AC439C3526AF4EB5496B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BCDF641ECC0628E237BC7E1FA802F7C /* Pods-KeepKaizen.debug.xcconfig */;
+			baseConfigurationReference = 766304125E1D25D3B157F078E6020EAC /* TextFieldEffects.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-KeepKaizen/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TextFieldEffects/TextFieldEffects-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TextFieldEffects/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-KeepKaizen/Pods-KeepKaizen.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_KeepKaizen;
+				MODULEMAP_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TextFieldEffects;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		721B853278C185ECD27041A99CF5CD3C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -563,44 +725,13 @@
 			};
 			name = Release;
 		};
-		936F49227778F19B37E5A68D5A497816 /* Debug */ = {
+		86C0012C73B8D0E00CA22531A9CA1D9B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A2A70D0B3CA47639B383373FBDA1515 /* SideMenu.xcconfig */;
+			baseConfigurationReference = 8BCDF641ECC0628E237BC7E1FA802F7C /* Pods-KeepKaizen.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SideMenu/SideMenu-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SideMenu/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SideMenu/SideMenu.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SideMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		99590212F19B05F4EB96C400A828FFAC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BA95D88B40D3D4A5B27507B26AC0F7B /* Pods-KeepKaizen.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -613,7 +744,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-KeepKaizen/Pods-KeepKaizen.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -621,12 +752,13 @@
 				PRODUCT_NAME = Pods_KeepKaizen;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		B67742E742FFE329F30BCD7473C8E02A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -669,18 +801,71 @@
 			};
 			name = Debug;
 		};
+		C63C67F23AA124D146858670806D5365 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 766304125E1D25D3B157F078E6020EAC /* TextFieldEffects.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TextFieldEffects/TextFieldEffects-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TextFieldEffects/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TextFieldEffects;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D404198C0DED09B6E99C4BEAFFBB444D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C14782298834327F3F51A4FAB097578E /* SideMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenu/SideMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SideMenu/SideMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SideMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0629A7C8074C0967E713FE06E83044A5 /* Build configuration list for PBXNativeTarget "Pods-KeepKaizen" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				63E39FE89D7FBF73F958A7CB25E0A828 /* Debug */,
-				99590212F19B05F4EB96C400A828FFAC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -690,11 +875,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A967C4D64BCE264164E44C7605F589F9 /* Build configuration list for PBXNativeTarget "SideMenu" */ = {
+		459C5DE46A7308C65029C2533DBA2314 /* Build configuration list for PBXNativeTarget "Pods-KeepKaizen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				936F49227778F19B37E5A68D5A497816 /* Debug */,
-				1F1D92ED3C431AB84DB6625F8BBF2815 /* Release */,
+				86C0012C73B8D0E00CA22531A9CA1D9B /* Debug */,
+				43065F3169977DEDC6CD30591E139AED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA7DC62621F34BC2113F6181CF970B2B /* Build configuration list for PBXNativeTarget "SideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D404198C0DED09B6E99C4BEAFFBB444D /* Debug */,
+				458D724924438BF58041B21495FAB2E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA92888A49CDAD1E45786E09CD3EAF1D /* Build configuration list for PBXNativeTarget "TextFieldEffects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C63C67F23AA124D146858670806D5365 /* Debug */,
+				54601A52BC18AC439C3526AF4EB5496B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
