@@ -1,0 +1,143 @@
+//
+//  AddKaizenViewController.swift
+//  KeepKaizen
+//
+//  Created by James Stern on 9/28/16.
+//  Copyright © 2016 James Stern. All rights reserved.
+//
+
+import UIKit
+import Firebase
+import FirebaseDatabase
+
+class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    var dbRef: FIRDatabaseReference!
+
+    @IBOutlet weak var deltaSign: ADVSegmentedControl!
+    @IBOutlet weak var deltaLabel: UITextField!
+    @IBOutlet weak var goalText: UITextField!
+    @IBOutlet weak var frequencyButton: UIButton!
+    @IBOutlet weak var categoryButton: UIButton!
+    @IBOutlet weak var frequencyPicker: UIPickerView!
+    @IBOutlet weak var categoryPicker: UIPickerView!
+    @IBOutlet weak var addButton: UIButton!
+    
+    var categories = ["Fitness", "Finance", "Health", "Education", "Personal"]
+    var freqs = ["Daily", "3X per Week", "2X per Week", "Weekly", "Monthly"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        dbRef = FIRDatabase.database().reference().child("goal-items")
+        
+        deltaSign.addTarget(self, action: #selector(segmentValueChanged(_:)), for: .valueChanged)
+
+        frequencyPicker.dataSource = self
+        frequencyPicker.delegate = self
+        
+        categoryPicker.dataSource = self
+        categoryPicker.delegate = self
+    }
+    
+    @IBAction func frequencyButtonPressed(_ sender: AnyObject) {
+        frequencyPicker.isHidden = false
+        categoryPicker.isHidden = true
+        
+        addButton.isHidden = true
+        
+    }
+
+    @IBAction func categoryButtonPressed(_ sender: AnyObject) {
+        categoryPicker.isHidden = false
+        frequencyPicker.isHidden = true
+        
+        addButton.isHidden = true
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if (pickerView.tag == 1){
+            return freqs.count
+        } else {
+            return categories.count
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if (pickerView.tag == 1){
+            return freqs[row]
+        } else {
+            return categories[row]
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if (pickerView.tag == 1){
+            frequencyButton.setTitle(freqs[row], for: UIControlState.normal)
+            frequencyPicker.isHidden = true
+            
+            addButton.isHidden = false
+            
+        } else {
+            categoryButton.setTitle(categories[row], for: UIControlState.normal)
+            categoryPicker.isHidden = true
+            
+            addButton.isHidden = false
+            
+        }
+    }
+    func segmentValueChanged(_ sender: AnyObject?){
+        
+        if deltaSign.selectedIndex == 0 {
+            
+            deltaLabel.textColor = UIColor(red: 69/255, green: 202/255, blue: 230/255, alpha: 1)
+            deltaSign.thumbColor = UIColor(red: 69/255, green: 202/255, blue: 230/255, alpha: 1)
+            deltaSign.selectedLabelColor = UIColor.white
+            deltaSign.unselectedLabelColor = UIColor(red: 241/255, green: 23/255, blue: 63/255, alpha: 1)
+            
+        } else {
+
+            deltaLabel.textColor = UIColor(red: 241/255, green: 23/255, blue: 63/255, alpha: 1)
+            deltaSign.thumbColor = UIColor(red: 241/255, green: 23/255, blue: 63/255, alpha: 1)
+            deltaSign.selectedLabelColor = UIColor(red: 69/255, green: 202/255, blue: 230/255, alpha: 1)
+            deltaSign.unselectedLabelColor = UIColor.white
+        }
+    
+    }
+    
+    
+    @IBAction func addGoalButton(_ sender: AnyObject) {
+        
+        if (goalText.text?.isEmpty)! {
+            print("Must enter info")
+        } else {
+            
+            if let user = FIRAuth.auth()?.currentUser {
+        
+            if let goalContent = goalText.text {
+            
+                let goal = Goal(content: goalContent, addedByUser: user.uid, freq: (frequencyButton.titleLabel?.text)!, category: (categoryButton.titleLabel?.text)!, delta: (Int(deltaLabel.text!))!, deltaSign: (Int(deltaSign.selectedIndex)), completions: 0)
+            
+                let goalRef = self.dbRef.child(goalContent.lowercased())
+                
+                let goalConvert = goal.toAnyObject()
+                
+                print(goalConvert)
+                goalRef.setValue(goalConvert)
+        }
+            }
+    }
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}

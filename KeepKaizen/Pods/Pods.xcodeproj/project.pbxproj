@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D1B616CEC3136096BE0FBA66A922431 /* SideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8424927CF5BC11404BF4E184CA13AB /* SideMenu-dummy.m */; };
+		104ECCB341D3AB2FA69CB50063C2917D /* SideMenuTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775AAFB445BB87464EBBD26DBEFE25E9 /* SideMenuTransition.swift */; };
+		8225302562728E3CD9445AC4A63337E3 /* UISideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A839A0A987FC1CFE4D8F21FB9E16B5 /* UISideMenuNavigationController.swift */; };
+		86EFEB7042E893E4FE52434DCEEAA99B /* Pods-KeepKaizen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C782C2B10DB5B1F0388B4EFFAB55668 /* Pods-KeepKaizen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9479CD892D6A39D480D3B6B6CFF9D3C0 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D1E142CEBD7B9DC07BA3A777E26A1 /* SideMenuManager.swift */; };
+		A1541C317D13926666C4F1472D58E96F /* SideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96D7C7C7495A533B876DA8622C3984DE /* SideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCD7B21785A01B2BD04BA2E002D2CB77 /* Pods-KeepKaizen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BADECF562F661BF49828C1DC29A7163 /* Pods-KeepKaizen-dummy.m */; };
+		DF3150A4E1B70B1FCB95009A9824A56F /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BF3A309F31D88175D73D5AE0652F10 /* UITableViewVibrantCell.swift */; };
+		EA686A8C523E4BAF69DA992EC09C6E5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		EAAAD5B8A37FDDF8EE6167F0349F5B93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17923E40DAE9F4FA7199D186742FED11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F648F9A1762FD6D8A753CB677C032350;
+			remoteInfo = SideMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07C947BD42C3A1F2FCC149F82519868A /* Pods-KeepKaizen-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KeepKaizen-acknowledgements.plist"; sourceTree = "<group>"; };
+		0882FD710AA4189E37C3A39311522195 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		0BADECF562F661BF49828C1DC29A7163 /* Pods-KeepKaizen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KeepKaizen-dummy.m"; sourceTree = "<group>"; };
+		1A1B20FF82B8E2F995DF185C9FF368C5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA95D88B40D3D4A5B27507B26AC0F7B /* Pods-KeepKaizen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeepKaizen.release.xcconfig"; sourceTree = "<group>"; };
+		1C782C2B10DB5B1F0388B4EFFAB55668 /* Pods-KeepKaizen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KeepKaizen-umbrella.h"; sourceTree = "<group>"; };
+		21154644BE2A4E22726E67C3413AF7FC /* SideMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SideMenu.modulemap; sourceTree = "<group>"; };
+		27F1974A5739F1ECC986D486C6DE9254 /* Pods-KeepKaizen-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KeepKaizen-frameworks.sh"; sourceTree = "<group>"; };
+		2E2FE8135543EAF2F5832073895F990D /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
+		391882D32B2562A4550D2541C35D9A30 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F4F5B82ECAD89EC54828592A76FF9E0 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		42BEFA109ECECBD01B5C43418552500E /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Analytics/Sources/Firebase.h; sourceTree = "<group>"; };
+		46D56EAE9DCC1BC635E05B3D2D55219C /* Pods_KeepKaizen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepKaizen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2A70D0B3CA47639B383373FBDA1515 /* SideMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenu.xcconfig; sourceTree = "<group>"; };
+		4D470CCA7DD7369AA522D0F3CA73E07D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59BF3A309F31D88175D73D5AE0652F10 /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewVibrantCell.swift; path = Pod/Classes/UITableViewVibrantCell.swift; sourceTree = "<group>"; };
+		5FE197E32AEE254BD271681918B84648 /* SideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-prefix.pch"; sourceTree = "<group>"; };
+		61B606135ABB755696DDB9821B67C7FD /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		6579F6E983509B1C639F9BE4D44CCA4C /* Pods-KeepKaizen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KeepKaizen.modulemap"; sourceTree = "<group>"; };
+		775AAFB445BB87464EBBD26DBEFE25E9 /* SideMenuTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuTransition.swift; path = Pod/Classes/SideMenuTransition.swift; sourceTree = "<group>"; };
+		7A7A00B845833EFCFB8C956B63E3D1DB /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		8BCDF641ECC0628E237BC7E1FA802F7C /* Pods-KeepKaizen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeepKaizen.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		943E29215442E524C0C866BDA327926B /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		96D7C7C7495A533B876DA8622C3984DE /* SideMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-umbrella.h"; sourceTree = "<group>"; };
+		974BF3607ABAA2A88664EE7A1D596BFC /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD8424927CF5BC11404BF4E184CA13AB /* SideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenu-dummy.m"; sourceTree = "<group>"; };
+		C293E876B740233CB70331174BDE3EC3 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		C5E44DD4583E5710984A8B7B3D0547AF /* Pods-KeepKaizen-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KeepKaizen-resources.sh"; sourceTree = "<group>"; };
+		C9D263B16C23487C3B970522F893A862 /* Pods-KeepKaizen-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KeepKaizen-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D14D1E142CEBD7B9DC07BA3A777E26A1 /* SideMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuManager.swift; path = Pod/Classes/SideMenuManager.swift; sourceTree = "<group>"; };
+		E0A839A0A987FC1CFE4D8F21FB9E16B5 /* UISideMenuNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISideMenuNavigationController.swift; path = Pod/Classes/UISideMenuNavigationController.swift; sourceTree = "<group>"; };
+		FCC667346288F0442A4B8A02A76569AB /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33B4866DDABC6D427E00EE790605AE0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA686A8C523E4BAF69DA992EC09C6E5A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		813890E351DE26D7C4539973D62BA070 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAAAD5B8A37FDDF8EE6167F0349F5B93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		112C7921E3A497328D11F4930CBBC9CA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1E0D68AFA042D507740849558EE1D441 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A1B20FF82B8E2F995DF185C9FF368C5 /* Info.plist */,
+				21154644BE2A4E22726E67C3413AF7FC /* SideMenu.modulemap */,
+				4A2A70D0B3CA47639B383373FBDA1515 /* SideMenu.xcconfig */,
+				AD8424927CF5BC11404BF4E184CA13AB /* SideMenu-dummy.m */,
+				5FE197E32AEE254BD271681918B84648 /* SideMenu-prefix.pch */,
+				96D7C7C7495A533B876DA8622C3984DE /* SideMenu-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SideMenu";
+			sourceTree = "<group>";
+		};
+		21ADBA418BF1B527D01B7F63DD5F22D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61B606135ABB755696DDB9821B67C7FD /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		299D6F32F35506D9E8A3E316901E07D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46D56EAE9DCC1BC635E05B3D2D55219C /* Pods_KeepKaizen.framework */,
+				974BF3607ABAA2A88664EE7A1D596BFC /* SideMenu.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3222C25C4CE2CC29BC447F6B077D5C8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				391882D32B2562A4550D2541C35D9A30 /* GoogleNetworkingUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		357FAC1A0E969C1D79626E8737E78AAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				943E29215442E524C0C866BDA327926B /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		393F5C631E6EEE3C70F7E1EA335327DE /* Pods-KeepKaizen */ = {
+			isa = PBXGroup;
+			children = (
+				4D470CCA7DD7369AA522D0F3CA73E07D /* Info.plist */,
+				6579F6E983509B1C639F9BE4D44CCA4C /* Pods-KeepKaizen.modulemap */,
+				C9D263B16C23487C3B970522F893A862 /* Pods-KeepKaizen-acknowledgements.markdown */,
+				07C947BD42C3A1F2FCC149F82519868A /* Pods-KeepKaizen-acknowledgements.plist */,
+				0BADECF562F661BF49828C1DC29A7163 /* Pods-KeepKaizen-dummy.m */,
+				27F1974A5739F1ECC986D486C6DE9254 /* Pods-KeepKaizen-frameworks.sh */,
+				C5E44DD4583E5710984A8B7B3D0547AF /* Pods-KeepKaizen-resources.sh */,
+				1C782C2B10DB5B1F0388B4EFFAB55668 /* Pods-KeepKaizen-umbrella.h */,
+				8BCDF641ECC0628E237BC7E1FA802F7C /* Pods-KeepKaizen.debug.xcconfig */,
+				1BA95D88B40D3D4A5B27507B26AC0F7B /* Pods-KeepKaizen.release.xcconfig */,
+			);
+			name = "Pods-KeepKaizen";
+			path = "Target Support Files/Pods-KeepKaizen";
+			sourceTree = "<group>";
+		};
+		50DBB49DA46D25EF89C5A469ED017586 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E2FE8135543EAF2F5832073895F990D /* FirebaseAuth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57ED68AAFA4ADD5D45FA6EC11709A61F /* GoogleNetworkingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				3222C25C4CE2CC29BC447F6B077D5C8D /* Frameworks */,
+			);
+			path = GoogleNetworkingUtilities;
+			sourceTree = "<group>";
+		};
+		60DB66C0794D7889AE427B5DA32184BF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				393F5C631E6EEE3C70F7E1EA335327DE /* Pods-KeepKaizen */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		626F79AE38F3B133F5DF3E6073A967E7 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				7A7A00B845833EFCFB8C956B63E3D1DB /* FIRInstanceID.h */,
+				21ADBA418BF1B527D01B7F63DD5F22D2 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				B841DD5AFF3088238DCDCA0605C16337 /* Pods */,
+				299D6F32F35506D9E8A3E316901E07D0 /* Products */,
+				60DB66C0794D7889AE427B5DA32184BF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7E298CDAFB0138A920F3183C3A8D9782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C293E876B740233CB70331174BDE3EC3 /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82E920021BB62EEC8495B9EA400E41D8 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				ECF7C8C456FA62FC3FB9C8E0BA043F98 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		87F2D153551D99EBE354ACF3C35F3983 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D14D1E142CEBD7B9DC07BA3A777E26A1 /* SideMenuManager.swift */,
+				775AAFB445BB87464EBBD26DBEFE25E9 /* SideMenuTransition.swift */,
+				E0A839A0A987FC1CFE4D8F21FB9E16B5 /* UISideMenuNavigationController.swift */,
+				59BF3A309F31D88175D73D5AE0652F10 /* UITableViewVibrantCell.swift */,
+				1E0D68AFA042D507740849558EE1D441 /* Support Files */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		8FC3E1F7F36ADFCD49653C6BDC3734FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0882FD710AA4189E37C3A39311522195 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91769C6383B6DA0558AF68E8DC3CEAF8 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				42BEFA109ECECBD01B5C43418552500E /* Firebase.h */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		B841DD5AFF3088238DCDCA0605C16337 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D01D4E6E808193A0E2A21B08CE13099B /* Firebase */,
+				C963C35BFD18B0F0414F8DA43925F064 /* FirebaseAnalytics */,
+				FA93E941FCE7265DBD28D446D902633D /* FirebaseAuth */,
+				C1C70657680821F016EE59722F773B5E /* FirebaseDatabase */,
+				626F79AE38F3B133F5DF3E6073A967E7 /* FirebaseInstanceID */,
+				D7B55B4061B42FB98B60C654A6F30948 /* GoogleInterchangeUtilities */,
+				57ED68AAFA4ADD5D45FA6EC11709A61F /* GoogleNetworkingUtilities */,
+				C069A5CF208D25A1C798AF390CC5039A /* GoogleSymbolUtilities */,
+				82E920021BB62EEC8495B9EA400E41D8 /* GoogleUtilities */,
+				87F2D153551D99EBE354ACF3C35F3983 /* SideMenu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				112C7921E3A497328D11F4930CBBC9CA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C069A5CF208D25A1C798AF390CC5039A /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				357FAC1A0E969C1D79626E8737E78AAA /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		C1C70657680821F016EE59722F773B5E /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				F63BA0DB8AC2A0A8614368DDFF3E6F3C /* Frameworks */,
+			);
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		C963C35BFD18B0F0414F8DA43925F064 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				8FC3E1F7F36ADFCD49653C6BDC3734FF /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		D01D4E6E808193A0E2A21B08CE13099B /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				91769C6383B6DA0558AF68E8DC3CEAF8 /* Analytics */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		D7B55B4061B42FB98B60C654A6F30948 /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				7E298CDAFB0138A920F3183C3A8D9782 /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		ECF7C8C456FA62FC3FB9C8E0BA043F98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCC667346288F0442A4B8A02A76569AB /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F63BA0DB8AC2A0A8614368DDFF3E6F3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F4F5B82ECAD89EC54828592A76FF9E0 /* FirebaseDatabase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA93E941FCE7265DBD28D446D902633D /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				50DBB49DA46D25EF89C5A469ED017586 /* Frameworks */,
+			);
+			path = FirebaseAuth;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1693BD4E7B1A54B8E80CE7C4FADC4AA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1541C317D13926666C4F1472D58E96F /* SideMenu-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0728C16F5F07576F84D325288ACD8C8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86EFEB7042E893E4FE52434DCEEAA99B /* Pods-KeepKaizen-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		62607A0015F5A8E8D16C40700879B84A /* Pods-KeepKaizen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0629A7C8074C0967E713FE06E83044A5 /* Build configuration list for PBXNativeTarget "Pods-KeepKaizen" */;
+			buildPhases = (
+				6859581FCEA4A78F44E297E41934F7A6 /* Sources */,
+				813890E351DE26D7C4539973D62BA070 /* Frameworks */,
+				B0728C16F5F07576F84D325288ACD8C8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02ECA66A18CC3C9358D92D4676865A7E /* PBXTargetDependency */,
+			);
+			name = "Pods-KeepKaizen";
+			productName = "Pods-KeepKaizen";
+			productReference = 46D56EAE9DCC1BC635E05B3D2D55219C /* Pods_KeepKaizen.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F648F9A1762FD6D8A753CB677C032350 /* SideMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A967C4D64BCE264164E44C7605F589F9 /* Build configuration list for PBXNativeTarget "SideMenu" */;
+			buildPhases = (
+				67D55EFD9599916EC1653788FCAE442A /* Sources */,
+				33B4866DDABC6D427E00EE790605AE0C /* Frameworks */,
+				1693BD4E7B1A54B8E80CE7C4FADC4AA8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SideMenu;
+			productName = SideMenu;
+			productReference = 974BF3607ABAA2A88664EE7A1D596BFC /* SideMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					62607A0015F5A8E8D16C40700879B84A = {
+						LastSwiftMigration = 0800;
+					};
+					F648F9A1762FD6D8A753CB677C032350 = {
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 299D6F32F35506D9E8A3E316901E07D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62607A0015F5A8E8D16C40700879B84A /* Pods-KeepKaizen */,
+				F648F9A1762FD6D8A753CB677C032350 /* SideMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67D55EFD9599916EC1653788FCAE442A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D1B616CEC3136096BE0FBA66A922431 /* SideMenu-dummy.m in Sources */,
+				9479CD892D6A39D480D3B6B6CFF9D3C0 /* SideMenuManager.swift in Sources */,
+				104ECCB341D3AB2FA69CB50063C2917D /* SideMenuTransition.swift in Sources */,
+				8225302562728E3CD9445AC4A63337E3 /* UISideMenuNavigationController.swift in Sources */,
+				DF3150A4E1B70B1FCB95009A9824A56F /* UITableViewVibrantCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6859581FCEA4A78F44E297E41934F7A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCD7B21785A01B2BD04BA2E002D2CB77 /* Pods-KeepKaizen-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02ECA66A18CC3C9358D92D4676865A7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SideMenu;
+			target = F648F9A1762FD6D8A753CB677C032350 /* SideMenu */;
+			targetProxy = 17923E40DAE9F4FA7199D186742FED11 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1F1D92ED3C431AB84DB6625F8BBF2815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A2A70D0B3CA47639B383373FBDA1515 /* SideMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenu/SideMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SideMenu/SideMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SideMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		63E39FE89D7FBF73F958A7CB25E0A828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BCDF641ECC0628E237BC7E1FA802F7C /* Pods-KeepKaizen.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KeepKaizen/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KeepKaizen/Pods-KeepKaizen.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_KeepKaizen;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		721B853278C185ECD27041A99CF5CD3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		936F49227778F19B37E5A68D5A497816 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A2A70D0B3CA47639B383373FBDA1515 /* SideMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenu/SideMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SideMenu/SideMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SideMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		99590212F19B05F4EB96C400A828FFAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BA95D88B40D3D4A5B27507B26AC0F7B /* Pods-KeepKaizen.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KeepKaizen/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KeepKaizen/Pods-KeepKaizen.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_KeepKaizen;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B67742E742FFE329F30BCD7473C8E02A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0629A7C8074C0967E713FE06E83044A5 /* Build configuration list for PBXNativeTarget "Pods-KeepKaizen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63E39FE89D7FBF73F958A7CB25E0A828 /* Debug */,
+				99590212F19B05F4EB96C400A828FFAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B67742E742FFE329F30BCD7473C8E02A /* Debug */,
+				721B853278C185ECD27041A99CF5CD3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A967C4D64BCE264164E44C7605F589F9 /* Build configuration list for PBXNativeTarget "SideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				936F49227778F19B37E5A68D5A497816 /* Debug */,
+				1F1D92ED3C431AB84DB6625F8BBF2815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
