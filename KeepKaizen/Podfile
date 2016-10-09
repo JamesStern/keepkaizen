@@ -12,5 +12,6 @@ target 'KeepKaizen' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'TextFieldEffects'
+  pod 'SwiftKeychainWrapper'
 
 end

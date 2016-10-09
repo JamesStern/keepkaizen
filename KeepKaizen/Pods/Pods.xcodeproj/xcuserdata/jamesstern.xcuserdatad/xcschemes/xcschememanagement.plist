@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftKeychainWrapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>392E85E4DE8AB8AE00D1C09D0BB3AEA3</key>
+		<key>9D33DC207A219BF0122CB701A40BA36D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A281E7E91937458D8B36DD7D4F85962E</key>
+		<key>B04A1041452B287FECAFD624FA25ED85</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ECCDFB83EB9E98365F9AA88F717932AC</key>
+		<key>CD2EBEF7416D524502F61DB5E5FB9913</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4C8DA9A2DF8BA370D3D44A09AD307AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

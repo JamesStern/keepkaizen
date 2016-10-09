@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6A5417881D9DD50600B99392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5417861D9DD50600B99392 /* Main.storyboard */; };
 		6A5CA0661DAACD7400982C9D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA0651DAACD7400982C9D /* SignInViewController.swift */; };
+		6A5CA0691DAAE17200982C9D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA0681DAAE17200982C9D /* Constants.swift */; };
+		6A5CA06E1DAAEAA300982C9D /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA06D1DAAEAA300982C9D /* SideMenuVC.swift */; };
+		6A5CA0721DAAFD8200982C9D /* SignOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA0711DAAFD8200982C9D /* SignOutVC.swift */; };
 		6A94FDA11D9C300E00C923C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94FDA01D9C300E00C923C2 /* AppDelegate.swift */; };
 		6A94FDA31D9C300E00C923C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94FDA21D9C300E00C923C2 /* ViewController.swift */; };
 		6A94FDA81D9C300E00C923C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A94FDA71D9C300E00C923C2 /* Assets.xcassets */; };
@@ -28,6 +31,10 @@
 		5F6F103041A1A975068E4936 /* Pods-KeepKaizen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepKaizen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeepKaizen/Pods-KeepKaizen.debug.xcconfig"; sourceTree = "<group>"; };
 		6A5417871D9DD50600B99392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A5CA0651DAACD7400982C9D /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		6A5CA0681DAAE17200982C9D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6A5CA06A1DAAE68A00982C9D /* KeepKaizen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeepKaizen.entitlements; sourceTree = "<group>"; };
+		6A5CA06D1DAAEAA300982C9D /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		6A5CA0711DAAFD8200982C9D /* SignOutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutVC.swift; sourceTree = "<group>"; };
 		6A94FD9D1D9C300E00C923C2 /* KeepKaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepKaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A94FDA01D9C300E00C923C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A94FDA21D9C300E00C923C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +70,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6A5CA0671DAAE15B00982C9D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6A5CA0681DAAE17200982C9D /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		6A94FD941D9C300E00C923C2 = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +99,11 @@
 		6A94FD9F1D9C300E00C923C2 /* KeepKaizen */ = {
 			isa = PBXGroup;
 			children = (
+				6A5CA06A1DAAE68A00982C9D /* KeepKaizen.entitlements */,
+				6A5CA0671DAAE15B00982C9D /* Utils */,
 				6A5417861D9DD50600B99392 /* Main.storyboard */,
+				6A5CA0711DAAFD8200982C9D /* SignOutVC.swift */,
+				6A5CA06D1DAAEAA300982C9D /* SideMenuVC.swift */,
 				6A5CA0651DAACD7400982C9D /* SignInViewController.swift */,
 				6AF1D3831D9F0F53004E3641 /* GoalsTableViewCell.swift */,
 				6A94FDA91D9C300E00C923C2 /* LaunchScreen.storyboard */,
@@ -147,6 +166,11 @@
 						DevelopmentTeam = 652B9VQHBF;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -239,10 +263,13 @@
 				6A94FDA11D9C300E00C923C2 /* AppDelegate.swift in Sources */,
 				6AF639C11D9C670200121AD6 /* AddKaizenViewController.swift in Sources */,
 				6AF1D3841D9F0F53004E3641 /* GoalsTableViewCell.swift in Sources */,
+				6A5CA0721DAAFD8200982C9D /* SignOutVC.swift in Sources */,
+				6A5CA06E1DAAEAA300982C9D /* SideMenuVC.swift in Sources */,
 				6A5CA0661DAACD7400982C9D /* SignInViewController.swift in Sources */,
 				6AF1D3801D9EC64A004E3641 /* User.swift in Sources */,
 				6AF1D3821D9EC7D1004E3641 /* Goal.swift in Sources */,
 				6AF639BC1D9C441D00121AD6 /* SegmentedController.swift in Sources */,
+				6A5CA0691DAAE17200982C9D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +391,7 @@
 			baseConfigurationReference = 5F6F103041A1A975068E4936 /* Pods-KeepKaizen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeepKaizen/KeepKaizen.entitlements;
 				DEVELOPMENT_TEAM = 652B9VQHBF;
 				INFOPLIST_FILE = KeepKaizen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -378,6 +406,7 @@
 			baseConfigurationReference = 0A2DFB0BB7DEEBEDC67FFD98 /* Pods-KeepKaizen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeepKaizen/KeepKaizen.entitlements;
 				DEVELOPMENT_TEAM = 652B9VQHBF;
 				INFOPLIST_FILE = KeepKaizen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
