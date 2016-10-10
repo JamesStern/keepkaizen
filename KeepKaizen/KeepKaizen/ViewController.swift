@@ -131,14 +131,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let delta = goals[cell].delta
         
+        let goalId = goals[cell].key
+        
         let newPoints:Int = self.points + delta!
         
         DataService.ds.REF_CURRENT_USER.setValue(["kaizen-points": newPoints])
         
+        DataService.ds.REF_CURRENT_USER.child("completions").child(goalId!).setValue(true)
         
         
         
    }
+    
 
 }
 

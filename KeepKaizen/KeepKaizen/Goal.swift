@@ -18,7 +18,7 @@ struct Goal {
     let category:String!
     let delta:Int!
     let deltaSign:Int!
-    let completions:Int!
+    var completions:Int!
     let itemRef:FIRDatabaseReference?
     
     init (content:String, addedByUser:String, freq:String, category:String, delta:Int, deltaSign:Int, completions:Int, key:String = "") {
@@ -91,4 +91,13 @@ struct Goal {
         
         return output as AnyObject
     }
+    
+//    func addCompletion(addCompletion: Bool) {
+//        if addCompletion {
+//            completions = completions + 1
+//        } else {
+//            completions = completions - 1
+//        }
+//    
+//    }
 }
