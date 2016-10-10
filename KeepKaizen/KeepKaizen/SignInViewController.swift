@@ -35,7 +35,7 @@ class SignInViewController: UIViewController {
                 if error == nil {
                     print("User logged in with email")
                     if let user = user {
-                        let userData = ["provider": user.providerID, "email": email]
+                        let userData = ["email": email] as [String : Any]
                         self.completeSignIn(id: user.uid, userData: userData)
                     }
                     
@@ -55,7 +55,7 @@ class SignInViewController: UIViewController {
                         } else {
                             print("User created with email")
                             if let user = user {
-                                let userData = ["provider": user.providerID, "email": email]
+                                let userData = ["email": email, "kaizen-points": 0] as [String : Any]
                                 self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
@@ -67,7 +67,7 @@ class SignInViewController: UIViewController {
         
     }
     
-    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+    func completeSignIn(id: String, userData: Dictionary<String, Any>) {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.defaultKeychainWrapper().setString(id, forKey: KEY_UID)
         print("Data saved to keychain \(keychainResult)")

@@ -18,15 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         
-//        FIRAuth.auth()?.signIn(withEmail: "james@example.com", password: "jamess") { (user:FIRUser?, error:Error?) in
-//            if error == nil {
-//                print(user?.email)
-//            } else {
-//                print(error.debugDescription)
-//            }
-//            
-//        }
-        
         return true
     }
 

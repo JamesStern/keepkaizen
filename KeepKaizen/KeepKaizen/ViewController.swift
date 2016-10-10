@@ -22,11 +22,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var goalsTable: UITableView!
     
     var goals = [Goal]()
-    var points = [Int]()
+    var points = Int()
     var pointChange = Int()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DataService.ds.REF_CURRENT_USER.observe(.value, with: { (snapshot:FIRDataSnapshot) in
+            
+            self.points = (snapshot.value as? NSDictionary)?["kaizen-points"] as! Int
+            
+            self.kaizenPts.text = String(self.points)
+        
+        })
+        
+        
         
         startObservingDB()
                 
@@ -44,7 +54,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     
                     if goalObject.addedByUser == FIRAuth.auth()?.currentUser?.uid {
                         newItems.append(goalObject)
-                        self.points.append(goalObject.completions)
                     }
                 
                 
@@ -54,14 +63,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.goals = newItems
             self.goalsTable.reloadData()
             self.goalsCount.text = String(self.goals.count)
-            self.pointChange = self.points.reduce(0,+)
-            self.kaizenPts.text = String(self.pointChange)
+            
             
         }) { (error:Error) in
                 
                 print(error)
                 
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -117,18 +126,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let cell = indexPath.row
-        print(goals[cell].addedByUser)
         
         let delta = goals[cell].delta
         
-//        if goals[cell].deltaSign == 0 {
-//            self.points.append(goals[cell].delta)
-//        } else {
-//            self.points.append(goals[cell].delta)
-//        }
-//        print(self.points)
-        //self.kaizenPts.text = String(self.points)
+        let newPoints:Int = self.points + delta!
+        
+        DataService.ds.REF_CURRENT_USER.setValue(["kaizen-points": newPoints])
+        
+        
+        
+        
    }
 
 }
