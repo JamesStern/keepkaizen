@@ -27,8 +27,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var goals = [Goal]()
     var points = [Int]()
     var pointChange = Int()
-    
-    let addButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         dbPointsRef = FIRDatabase.database().reference().child("user-points")
         
         startObservingDB()
-        
+                
     }
     
     func startObservingDB() {
@@ -71,19 +69,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 
         }
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-        addButton.frame = CGRect(origin: CGPoint(x: self.view.frame.width / 2 - 97, y: self.view.frame.height - 90 ) , size: CGSize(width: 194, height: 70))
-        
-        addButton.setImage(#imageLiteral(resourceName: "addnewbutton"), for: UIControlState.normal)
-        
-        addButton.tag = 5
-        
-        addButton.addTarget(self, action: #selector(addNewButtonClicked), for: UIControlEvents.touchUpInside)
-        
-        self.navigationController?.view.addSubview(addButton)
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -94,17 +79,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return .lightContent
     }
     
-    @IBAction func addNewBtn(_ sender: AnyObject) {
+    @IBAction func addBtn(_ sender: AnyObject) {
+        performSegue(withIdentifier: "addNew", sender:  sender)
     }
+    
     
     @IBAction func unwindToViewController (sender: UIStoryboardSegue){
-        
-    }
-    
-    func addNewButtonClicked(sender:UIButton) {
-            
-            performSegue(withIdentifier: "addNew", sender:  sender)
-            addButton.removeFromSuperview()
         
     }
     
