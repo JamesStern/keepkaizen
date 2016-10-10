@@ -21,9 +21,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var goalsTable: UITableView!
     
-    var dbRef:FIRDatabaseReference!
-    var dbPointsRef:FIRDatabaseReference!
-    
     var goals = [Goal]()
     var points = [Int]()
     var pointChange = Int()
@@ -31,16 +28,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dbRef = FIRDatabase.database().reference().child("goal-items")
-        dbPointsRef = FIRDatabase.database().reference().child("user-points")
-        
         startObservingDB()
                 
     }
     
     func startObservingDB() {
         
-        dbRef.observe(.value, with: { (snapshot:FIRDataSnapshot) in
+        DataService.ds.REF_GOALS.observe(.value, with: { (snapshot:FIRDataSnapshot) in
             
             var newItems = [Goal]()
             
@@ -125,6 +119,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = indexPath.row
         print(goals[cell].addedByUser)
+        
+        let delta = goals[cell].delta
         
 //        if goals[cell].deltaSign == 0 {
 //            self.points.append(goals[cell].delta)

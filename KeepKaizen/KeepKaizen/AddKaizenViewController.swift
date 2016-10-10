@@ -11,8 +11,6 @@ import Firebase
 import FirebaseDatabase
 
 class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    var dbRef: FIRDatabaseReference!
 
     @IBOutlet weak var deltaSign: ADVSegmentedControl!
     @IBOutlet weak var deltaLabel: UITextField!
@@ -28,8 +26,6 @@ class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        dbRef = FIRDatabase.database().reference().child("goal-items")
         
         deltaSign.addTarget(self, action: #selector(segmentValueChanged(_:)), for: .valueChanged)
 
@@ -122,7 +118,7 @@ class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPicke
             
                 let goal = Goal(content: goalContent, addedByUser: user.uid, freq: (frequencyButton.titleLabel?.text)!, category: (categoryButton.titleLabel?.text)!, delta: (Int(deltaLabel.text!))!, deltaSign: (Int(deltaSign.selectedIndex)), completions: 0)
             
-                let goalRef = self.dbRef.child(goalContent.lowercased())
+                let goalRef = DataService.ds.REF_GOALS.childByAutoId()
                 
                 let goalConvert = goal.toAnyObject()
                 

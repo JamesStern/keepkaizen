@@ -23,9 +23,9 @@ class SignInViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-//        if let _ = KeychainWrapper.defaultKeychainWrapper().stringForKey(KEY_UID) {
-//            performSegue(withIdentifier: "goToHome", sender: nil)
-//        }
+        if let _ = KeychainWrapper.defaultKeychainWrapper().stringForKey(KEY_UID) {
+            performSegue(withIdentifier: "goToHome", sender: nil)
+        }
     }
     
     @IBAction func signInPressed(_ sender: AnyObject) {
