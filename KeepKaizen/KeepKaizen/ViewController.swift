@@ -143,12 +143,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let goalId = goals[cell].key
         
+        let currentCompletions = goals[cell].completions
+        
+        let date1 = Int(goals[cell].date1)
+        
+        let date2 = Int(goals[cell].date2)
+        
+        print("Streak is \(date1! - date2!) days long")
+        
         let newPoints:Int = self.points + delta!
         
         DataService.ds.REF_CURRENT_USER.setValue(["kaizen-points": newPoints])
         
-        DataService.ds.REF_CURRENT_USER.child("completions").child(goalId!).setValue(true)
-        
+        DataService.ds.REF_GOALS.child(goalId!).child("completions").setValue(currentCompletions! + 1)
         
         
    }

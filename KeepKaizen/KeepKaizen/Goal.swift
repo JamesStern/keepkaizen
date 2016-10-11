@@ -19,9 +19,11 @@ struct Goal {
     let delta:Int!
     let deltaSign:Int!
     var completions:Int!
+    let date1:String!
+    let date2:String!
     let itemRef:FIRDatabaseReference?
     
-    init (content:String, addedByUser:String, freq:String, category:String, delta:Int, deltaSign:Int, completions:Int, key:String = "") {
+    init (content:String, addedByUser:String, freq:String, category:String, delta:Int, deltaSign:Int, completions:Int, date1:String, date2:String, key:String = "") {
         
         self.key = key
         self.content = content
@@ -31,6 +33,8 @@ struct Goal {
         self.delta = delta
         self.deltaSign = deltaSign
         self.completions = completions
+        self.date1 = date1
+        self.date2 = date2
         self.itemRef = nil
         
     }
@@ -82,22 +86,26 @@ struct Goal {
         } else {
             completions = 0
         }
+        if let goalDate1 = (snapshot.value as? NSDictionary)?["date1"] as? String {
+            
+            date1 = goalDate1
+        } else {
+            date1 = nil
+        }
+        if let goalDate2 = (snapshot.value as? NSDictionary)?["date2"] as? String {
+            
+            date2 = goalDate2
+        } else {
+            date2 = nil
+        }
 
     }
     
     func toAnyObject() -> AnyObject {
         
-        let output:Dictionary<String, Any> = ["content":content!, "addedByUser":addedByUser!, "freq":freq!, "category":category!, "delta":delta!, "deltaSign":deltaSign!, "completions":completions! ]
+        let output:Dictionary<String, Any> = ["content":content!, "addedByUser":addedByUser!, "freq":freq!, "category":category!, "delta":delta!, "deltaSign":deltaSign!, "completions":completions!, "date1":date1!, "date2":date2! ]
         
         return output as AnyObject
     }
-    
-//    func addCompletion(addCompletion: Bool) {
-//        if addCompletion {
-//            completions = completions + 1
-//        } else {
-//            completions = completions - 1
-//        }
-//    
-//    }
+
 }

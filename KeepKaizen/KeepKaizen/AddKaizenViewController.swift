@@ -34,6 +34,7 @@ class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         categoryPicker.dataSource = self
         categoryPicker.delegate = self
+        
     }
     
     @IBAction func frequencyButtonPressed(_ sender: AnyObject) {
@@ -112,11 +113,16 @@ class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPicke
             print("Must enter info")
         } else {
             
+            let date = NSDate()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyyMMdd"
+            var dateString = dateFormatter.string(from: date as Date)
+            
             if let user = FIRAuth.auth()?.currentUser {
         
             if let goalContent = goalText.text {
             
-                let goal = Goal(content: goalContent, addedByUser: user.uid, freq: (frequencyButton.titleLabel?.text)!, category: (categoryButton.titleLabel?.text)!, delta: (Int(deltaLabel.text!))!, deltaSign: (Int(deltaSign.selectedIndex)), completions: 0)
+                let goal = Goal(content: goalContent, addedByUser: user.uid, freq: (frequencyButton.titleLabel?.text)!, category: (categoryButton.titleLabel?.text)!, delta: (Int(deltaLabel.text!))!, deltaSign: (Int(deltaSign.selectedIndex)), completions: 0, date1: dateString, date2: dateString)
             
                 let goalRef = DataService.ds.REF_GOALS.childByAutoId()
                 
