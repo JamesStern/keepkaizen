@@ -13,5 +13,6 @@ class GoalsTableViewCell: UITableViewCell {
     @IBOutlet weak var goalsLabel: UILabel!
     @IBOutlet weak var freqLabel: UILabel!
     @IBOutlet weak var deltaLabel: UILabel!
+    @IBOutlet weak var goalIcon: UIImageView!
 
 }

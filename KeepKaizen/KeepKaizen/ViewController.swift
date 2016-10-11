@@ -112,12 +112,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.freqLabel?.text = goal.freq
         cell.deltaLabel.text = String(goal.delta)
         
+        let catImage = goal.category.uppercased()
+        
+        cell.goalIcon.image = UIImage(named: "\(catImage).png")
+        
         if goal.deltaSign == 0 {
             
             cell.deltaLabel.textColor = UIColor(red: 69/255, green: 202/255, blue: 230/255, alpha: 1)
         } else {
         
             cell.deltaLabel.textColor = UIColor(red: 241/255, green: 23/255, blue: 63/255, alpha: 1)
+        }
+        
+        if (indexPath.row % 2 == 0){
+            cell.backgroundColor = UIColor.white
+        }else {
+            cell.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
         }
         
         

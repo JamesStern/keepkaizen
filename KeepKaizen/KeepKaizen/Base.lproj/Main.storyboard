@@ -258,7 +258,7 @@
                                     <constraint firstItem="tZ8-uq-Bdf" firstAttribute="centerX" secondItem="ej1-4w-u4P" secondAttribute="centerX" id="n3B-BK-Ah8"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rDO-WE-SJO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rDO-WE-SJO">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="p3f-OG-JMl">
                                     <rect key="frame" x="0.0" y="108" width="375" height="80"/>
@@ -283,7 +283,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Wv-9b-BWx" id="FJp-HB-wJh">
-                                            <frame key="frameInset" width="375" height="79"/>
+                                            <frame key="frameInset" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Label Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LF-ig-WnA">
@@ -301,19 +301,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u1T-4D-eQd">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="A1U-n1-Dme"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Lso-n0-hBN"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Dyb-Ie-z74" firstAttribute="top" secondItem="2LF-ig-WnA" secondAttribute="bottom" constant="8" id="Ad1-Tx-29w"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cRN-0i-NPm" secondAttribute="trailing" constant="15" id="Czd-iD-QzX"/>
+                                                <constraint firstItem="u1T-4D-eQd" firstAttribute="top" secondItem="FJp-HB-wJh" secondAttribute="topMargin" constant="6" id="KPC-XN-UZ8"/>
+                                                <constraint firstItem="u1T-4D-eQd" firstAttribute="leading" secondItem="FJp-HB-wJh" secondAttribute="leadingMargin" constant="5" id="Ti2-xe-sna"/>
                                                 <constraint firstItem="2LF-ig-WnA" firstAttribute="top" secondItem="FJp-HB-wJh" secondAttribute="topMargin" id="keA-a5-haP"/>
-                                                <constraint firstItem="2LF-ig-WnA" firstAttribute="leading" secondItem="FJp-HB-wJh" secondAttribute="leadingMargin" id="pj4-UZ-MaW"/>
-                                                <constraint firstItem="Dyb-Ie-z74" firstAttribute="leading" secondItem="FJp-HB-wJh" secondAttribute="leadingMargin" id="tP4-Fc-5wQ"/>
+                                                <constraint firstItem="2LF-ig-WnA" firstAttribute="leading" secondItem="FJp-HB-wJh" secondAttribute="leadingMargin" constant="60" id="pj4-UZ-MaW"/>
+                                                <constraint firstItem="Dyb-Ie-z74" firstAttribute="leading" secondItem="FJp-HB-wJh" secondAttribute="leadingMargin" constant="60" id="tP4-Fc-5wQ"/>
                                                 <constraint firstItem="cRN-0i-NPm" firstAttribute="top" secondItem="FJp-HB-wJh" secondAttribute="topMargin" constant="11" id="umM-8K-aWJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="deltaLabel" destination="cRN-0i-NPm" id="P3V-l7-4On"/>
                                             <outlet property="freqLabel" destination="Dyb-Ie-z74" id="tNm-5S-agY"/>
+                                            <outlet property="goalIcon" destination="u1T-4D-eQd" id="Lfj-hO-j7e"/>
                                             <outlet property="goalsLabel" destination="2LF-ig-WnA" id="yTW-Vg-oNp"/>
                                         </connections>
                                     </tableViewCell>

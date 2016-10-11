@@ -21,7 +21,7 @@ class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var addButton: UIButton!
     
-    var categories = ["Fitness", "Finance", "Health", "Education", "Personal"]
+    var categories = ["Career", "Dining", "Education", "Finance", "Fitness",  "Health", "Personal", "Recreation", "Time" ]
     var freqs = ["Daily", "3X per Week", "2X per Week", "Weekly", "Monthly"]
     
     override func viewDidLoad() {
