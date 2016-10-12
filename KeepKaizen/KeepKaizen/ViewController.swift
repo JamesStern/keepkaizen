@@ -15,15 +15,19 @@ import FirebaseAuth
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var kaizenPts: UILabel!
-    @IBOutlet weak var totalDays: UILabel!
+    @IBOutlet weak var completions: UILabel!
     @IBOutlet weak var streak: UILabel!
     @IBOutlet weak var goalsCount: UILabel!
     
     @IBOutlet weak var goalsTable: UITableView!
     
+    var goal:Goal!
     var goals = [Goal]()
     var points = Int()
     var pointChange = Int()
+    var completionsArr = [Int]()
+    var dateString:String!
+    var completionRef:FIRDatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,34 +40,39 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         })
         
-        
-        
         startObservingDB()
-                
+        
+        let date = NSDate()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        dateString = dateFormatter.string(from: date as Date)
+        
     }
     
     func startObservingDB() {
         
-        DataService.ds.REF_GOALS.observe(.value, with: { (snapshot:FIRDataSnapshot) in
+        DataService.ds.REF_GOALS.observe(.value, with: { (snapshot) in
             
-            var newItems = [Goal]()
+            self.goals = []
             
-            for goal in snapshot.children {
-                
-                let goalObject = Goal(snapshot: goal as! FIRDataSnapshot)
-                    
-                    if goalObject.addedByUser == FIRAuth.auth()?.currentUser?.uid {
-                        newItems.append(goalObject)
+            self.completionsArr = []
+            
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshot {
+                    if let goalDict = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let goal = Goal(goalKey: key, goalData: goalDict)
+                        
+                        if goal.addedByUser == FIRAuth.auth()?.currentUser?.uid {
+                        self.goals.append(goal)
+                        }
                     }
-                
-                
-            
+                }
             }
-            
-            self.goals = newItems
+
             self.goalsTable.reloadData()
             self.goalsCount.text = String(self.goals.count)
-            
+            self.completions.text = String(self.completionsArr.reduce(0, +))
             
         }) { (error:Error) in
                 
@@ -106,7 +115,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:GoalsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "goalCell", for: indexPath) as! GoalsTableViewCell
-
+        
         let goal = goals[indexPath.row]
         cell.goalsLabel?.text = goal.content
         cell.freqLabel?.text = goal.freq
@@ -137,25 +146,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        
+        
         let cell = indexPath.row
         
         let delta = goals[cell].delta
         
-        let goalId = goals[cell].key
+        let goalId = goals[cell].goalKey
         
         let currentCompletions = goals[cell].completions
         
-        let date1 = Int(goals[cell].date1)
-        
-        let date2 = Int(goals[cell].date2)
-        
-        print("Streak is \(date1! - date2!) days long")
-        
-        let newPoints:Int = self.points + delta!
+        let newPoints:Int = self.points + delta
         
         DataService.ds.REF_CURRENT_USER.setValue(["kaizen-points": newPoints])
         
-        DataService.ds.REF_GOALS.child(goalId!).child("completions").setValue(currentCompletions! + 1)
+        completionRef =  DataService.ds.REF_CURRENT_USER.child("activity").child(goalId)
+        
+        completionRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let _ = snapshot.value as? NSNull {
+                self.completionRef.setValue(true)
+            } else {
+                
+            }
+        
+        })
+        
+        DataService.ds.REF_GOALS.child(goalId).child("completions").setValue(currentCompletions + 1)
         
         
    }

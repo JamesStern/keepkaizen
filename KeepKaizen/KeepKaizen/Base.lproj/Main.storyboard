@@ -177,7 +177,7 @@
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gcx-GV-UXb">
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL DAYS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoS-oJ-UIk">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMPLETIONS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoS-oJ-UIk">
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="64" id="HTd-XX-agd"/>
                                                             <constraint firstAttribute="height" constant="17" id="pRy-YP-bMF"/>
@@ -347,11 +347,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="mbO-lt-Wgh"/>
                     <connections>
+                        <outlet property="completions" destination="JXq-5b-EK7" id="1Mh-rq-q72"/>
                         <outlet property="goalsCount" destination="ce6-Qd-G87" id="n7i-Wq-AgF"/>
                         <outlet property="goalsTable" destination="rDO-WE-SJO" id="Q5C-Wl-r3Z"/>
                         <outlet property="kaizenPts" destination="3ah-lb-bRt" id="TCu-Wv-saB"/>
                         <outlet property="streak" destination="vla-qe-UZJ" id="cG4-ZW-9w7"/>
-                        <outlet property="totalDays" destination="JXq-5b-EK7" id="lgI-P2-qZ5"/>
                         <segue destination="CZc-5H-H67" kind="show" identifier="addNew" id="X6l-AC-Qwx"/>
                     </connections>
                 </viewController>

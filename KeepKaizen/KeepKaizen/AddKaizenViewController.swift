@@ -22,7 +22,7 @@ class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var addButton: UIButton!
     
     var categories = ["Career", "Dining", "Education", "Finance", "Fitness",  "Health", "Personal", "Recreation", "Time" ]
-    var freqs = ["Daily", "3X per Week", "2X per Week", "Weekly", "Monthly"]
+    var freqs = ["Daily", "Weekly", "Monthly"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,26 +113,27 @@ class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPicke
             print("Must enter info")
         } else {
             
-            let date = NSDate()
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyyMMdd"
-            var dateString = dateFormatter.string(from: date as Date)
-            
             if let user = FIRAuth.auth()?.currentUser {
-        
-            if let goalContent = goalText.text {
-            
-                let goal = Goal(content: goalContent, addedByUser: user.uid, freq: (frequencyButton.titleLabel?.text)!, category: (categoryButton.titleLabel?.text)!, delta: (Int(deltaLabel.text!))!, deltaSign: (Int(deltaSign.selectedIndex)), completions: 0, date1: dateString, date2: dateString)
-            
-                let goalRef = DataService.ds.REF_GOALS.childByAutoId()
                 
-                let goalConvert = goal.toAnyObject()
-                
-                print(goalConvert)
-                goalRef.setValue(goalConvert)
-        }
+                if let goalContent = goalText.text {
+                    
+                    let delta = Int(deltaLabel.text!)!
+                    
+                    let goal: Dictionary<String, AnyObject> = [
+                        "content": goalContent as AnyObject,
+                        "addedByUser": user.uid as AnyObject,
+                        "freq": (frequencyButton.titleLabel?.text)! as AnyObject,
+                        "category": (categoryButton.titleLabel?.text)! as AnyObject,
+                        "delta": (delta as AnyObject),
+                        "deltaSign": (Int(deltaSign.selectedIndex) as AnyObject)
+                        
+                    ]
+                    
+                    let goalRef = DataService.ds.REF_GOALS.childByAutoId()
+                    goalRef.setValue(goal)
+                }
             }
-    }
+        }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)

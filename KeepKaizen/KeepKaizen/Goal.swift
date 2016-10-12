@@ -9,103 +9,113 @@
 import Foundation
 import FirebaseDatabase
 
-struct Goal {
+class Goal {
     
-    let key:String!
-    let content:String!
-    let addedByUser:String!
-    let freq:String!
-    let category:String!
-    let delta:Int!
-    let deltaSign:Int!
-    var completions:Int!
-    let date1:String!
-    let date2:String!
-    let itemRef:FIRDatabaseReference?
+    private var _content:String!
+    private var _addedByUser:String!
+    private var _freq:String!
+    private var _category:String!
+    private var _delta:Int!
+    private var _deltaSign:Int!
+    private var _completions:Int!
+    private var _goalKey:String!
+    private var _goalRef:FIRDatabaseReference!
     
-    init (content:String, addedByUser:String, freq:String, category:String, delta:Int, deltaSign:Int, completions:Int, date1:String, date2:String, key:String = "") {
-        
-        self.key = key
-        self.content = content
-        self.addedByUser = addedByUser
-        self.freq = freq
-        self.category = category
-        self.delta = delta
-        self.deltaSign = deltaSign
-        self.completions = completions
-        self.date1 = date1
-        self.date2 = date2
-        self.itemRef = nil
+    var content: String {
+        return _content
+    }
+    
+    var addedByUser: String {
+        return _addedByUser
+    }
+    
+    var freq:String {
+        return _freq
+    }
+    
+    var category: String {
+        return _category
+    }
+    
+    var delta: Int {
+        return _delta
+    }
+    
+    var deltaSign: Int {
+        return _deltaSign
+    }
+    
+    var completions: Int {
+        return _completions
+    }
+    
+    var goalKey: String {
+        return _goalKey
+    }
+    
+    init(content:String, addedByUser:String, freq:String, category:String, delta:Int, deltaSign:Int, completions:Int) {
+
+        self._content = content
+        self._addedByUser = addedByUser
+        self._freq = freq
+        self._category = category
+        self._delta = delta
+        self._deltaSign = deltaSign
+        self._completions = completions
         
     }
     
-    init (snapshot:FIRDataSnapshot) {
+    init(goalKey: String, goalData: Dictionary<String, AnyObject>) {
         
-        key = snapshot.key
-        itemRef = snapshot.ref
+        self._goalKey = goalKey
         
-        if let goalContent = (snapshot.value as? NSDictionary)?["content"] as? String {
-            
-            content = goalContent
+        if let content = goalData["content"] as? String {
+
+            self._content = content
             } else {
-                content = ""
+                self._content = ""
         }
-        if let goalUser = (snapshot.value as? NSDictionary)?["addedByUser"] as? String {
-            
-            addedByUser = goalUser
-        } else {
-            addedByUser = ""
-        }
-        if let goalFreq = (snapshot.value as? NSDictionary)?["freq"] as? String {
-            
-            freq = goalFreq
-        } else {
-            freq = ""
-        }
-        if let goalCategory = (snapshot.value as? NSDictionary)?["category"] as? String {
-            
-            category = goalCategory
-        } else {
-            category = ""
-        }
-        if let goalDelta = (snapshot.value as? NSDictionary)?["delta"] as? Int {
-            
-            delta = goalDelta
-        } else {
-            delta = 0
-        }
-        if let goalDeltaSign = (snapshot.value as? NSDictionary)?["deltaSign"] as? Int {
-            
-            deltaSign = goalDeltaSign
-        } else {
-            deltaSign = 0
-        }
-        if let goalCompletions = (snapshot.value as? NSDictionary)?["completions"] as? Int {
-            
-            completions = goalCompletions
-        } else {
-            completions = 0
-        }
-        if let goalDate1 = (snapshot.value as? NSDictionary)?["date1"] as? String {
-            
-            date1 = goalDate1
-        } else {
-            date1 = nil
-        }
-        if let goalDate2 = (snapshot.value as? NSDictionary)?["date2"] as? String {
-            
-            date2 = goalDate2
-        } else {
-            date2 = nil
-        }
+        if let addedByUser = goalData["addedByUser"] as? String {
 
+            self._addedByUser = addedByUser
+        } else {
+            self._addedByUser = ""
+        }
+        if let freq = goalData["freq"] as? String {
+
+            self._freq = freq
+        } else {
+            self._freq = ""
+        }
+        if let category = goalData["category"] as? String {
+
+            self._category = category
+        } else {
+            self._category = ""
+        }
+        if let delta = goalData["delta"] as? Int {
+
+            self._delta = delta
+        } else {
+            self._delta = 0
+        }
+        if let deltaSign = goalData["deltaSign"] as? Int {
+            
+            self._deltaSign = deltaSign
+        } else {
+            self._deltaSign = 0
+        }
+        if let completions = goalData["completions"] as? Int {
+            
+            self._completions = completions
+        } else {
+            self._completions = 0
+        }
+        
+        _goalRef = DataService.ds.REF_GOALS.child(_goalKey)
+
+        
+        
     }
     
-    func toAnyObject() -> AnyObject {
-        
-        let output:Dictionary<String, Any> = ["content":content!, "addedByUser":addedByUser!, "freq":freq!, "category":category!, "delta":delta!, "deltaSign":deltaSign!, "completions":completions!, "date1":date1!, "date2":date2! ]
-        
-        return output as AnyObject
-    }
-
 }
