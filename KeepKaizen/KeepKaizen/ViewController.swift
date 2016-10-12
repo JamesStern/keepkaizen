@@ -26,19 +26,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var points = Int()
     var pointChange = Int()
     var completionsArr = [Int]()
-    var dateString:String!
     var completionRef:FIRDatabaseReference!
+    var streakArr:[String]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         DataService.ds.REF_CURRENT_USER.observe(.value, with: { (snapshot:FIRDataSnapshot) in
-            
             self.points = (snapshot.value as? NSDictionary)?["kaizen-points"] as! Int
             
             self.kaizenPts.text = String(self.points)
         
         })
+        
+        DataService.ds.REF_CURRENT_USER.child("activity").observe(.childAdded, with: { (snapshot) in
+            
+            
+            print("JAMES: \(snapshot.key)")
+            
+            
+            })
         
         startObservingDB()
         
@@ -47,6 +54,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         dateFormatter.dateFormat = "yyyyMMdd"
         dateString = dateFormatter.string(from: date as Date)
         
+        let date1_str = "20161001"
+        let date2_str = "20160901"
+        
+        let secondDate = dateFormatter.date(from: date1_str)
+        let firstDate = dateFormatter.date(from: date2_str)
+        
+        print("JAMES: \(daysBetweenDates(startDate: firstDate!, endDate: secondDate!))")
+
+        
+    }
+    
+    func daysBetweenDates(startDate: Date, endDate: Date) -> Int
+    {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day], from: startDate, to: endDate)
+        return components.day!
     }
     
     func startObservingDB() {
@@ -58,6 +81,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.completionsArr = []
             
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                print("JAMES goals \(snapshot)")
                 for snap in snapshot {
                     if let goalDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
@@ -65,6 +89,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         
                         if goal.addedByUser == FIRAuth.auth()?.currentUser?.uid {
                         self.goals.append(goal)
+                        self.completionsArr.append(goal.completions)
                         }
                     }
                 }
@@ -82,11 +107,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -114,24 +134,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let goal = goals[indexPath.row]
+        
         let cell:GoalsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "goalCell", for: indexPath) as! GoalsTableViewCell
         
-        let goal = goals[indexPath.row]
-        cell.goalsLabel?.text = goal.content
-        cell.freqLabel?.text = goal.freq
-        cell.deltaLabel.text = String(goal.delta)
-        
-        let catImage = goal.category.uppercased()
-        
-        cell.goalIcon.image = UIImage(named: "\(catImage).png")
-        
-        if goal.deltaSign == 0 {
-            
-            cell.deltaLabel.textColor = UIColor(red: 69/255, green: 202/255, blue: 230/255, alpha: 1)
-        } else {
-        
-            cell.deltaLabel.textColor = UIColor(red: 241/255, green: 23/255, blue: 63/255, alpha: 1)
-        }
+        cell.delagate = self
         
         if (indexPath.row % 2 == 0){
             cell.backgroundColor = UIColor.white
@@ -139,6 +146,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
         }
         
+        cell.configureCell(goal: goal)
         
         return cell
         
@@ -146,32 +154,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        
         let cell = indexPath.row
         
         let delta = goals[cell].delta
         
-        let goalId = goals[cell].goalKey
-        
-        let currentCompletions = goals[cell].completions
-        
         let newPoints:Int = self.points + delta
         
         DataService.ds.REF_CURRENT_USER.setValue(["kaizen-points": newPoints])
-        
-        completionRef =  DataService.ds.REF_CURRENT_USER.child("activity").child(goalId)
-        
-        completionRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            if let _ = snapshot.value as? NSNull {
-                self.completionRef.setValue(true)
-            } else {
-                
-            }
-        
-        })
-        
-        DataService.ds.REF_GOALS.child(goalId).child("completions").setValue(currentCompletions + 1)
+
         
         
    }

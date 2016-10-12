@@ -9,3 +9,7 @@
 import Foundation
 
 let KEY_UID = "uid"
+var dateString:String!
+
+let date = NSDate()
+let dateFormatter = DateFormatter()
