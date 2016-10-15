@@ -13,3 +13,7 @@ var dateString:String!
 
 let date = NSDate()
 let dateFormatter = DateFormatter()
+
+var points = Int()
+
+

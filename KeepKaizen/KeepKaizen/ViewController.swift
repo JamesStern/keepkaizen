@@ -23,46 +23,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var goal:Goal!
     var goals = [Goal]()
-    var points = Int()
     var pointChange = Int()
     var completionsArr = [Int]()
     var completionRef:FIRDatabaseReference!
     var streakArr:[String]!
+    var currentStreak = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        DataService.ds.REF_CURRENT_USER.observe(.value, with: { (snapshot:FIRDataSnapshot) in
-            self.points = (snapshot.value as? NSDictionary)?["kaizen-points"] as! Int
-            
-            self.kaizenPts.text = String(self.points)
-        
-        })
-        
-        DataService.ds.REF_CURRENT_USER.child("activity").observe(.childAdded, with: { (snapshot) in
-            
-            
-            print("JAMES: \(snapshot.key)")
-            
-            
-            })
-        
         startObservingDB()
-        
-        let date = NSDate()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMdd"
-        dateString = dateFormatter.string(from: date as Date)
-        
-        let date1_str = "20161001"
-        let date2_str = "20160901"
-        
-        let secondDate = dateFormatter.date(from: date1_str)
-        let firstDate = dateFormatter.date(from: date2_str)
-        
-        print("JAMES: \(daysBetweenDates(startDate: firstDate!, endDate: secondDate!))")
-
-        
     }
     
     func daysBetweenDates(startDate: Date, endDate: Date) -> Int
@@ -74,6 +43,59 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func startObservingDB() {
         
+        DataService.ds.REF_CURRENT_USER.observe(.value, with: { (snapshot:FIRDataSnapshot) in
+            points = (snapshot.value as? NSDictionary)?["kaizen-points"] as! Int
+            self.kaizenPts.text = String(points)
+            
+            if (snapshot.value as? NSDictionary)?["streak"] as? Int != nil {
+            self.currentStreak = (snapshot.value as? NSDictionary)?["streak"] as! Int
+            print("JAMES: Streak init \(self.currentStreak)")
+            if self.currentStreak == 1 {
+                self.streak.text = String(self.currentStreak) + " day"
+            } else {
+                self.streak.text = String(self.currentStreak) + " days"
+            }
+            } else {
+                print("JAMES: zero")
+            }
+        })
+        
+        DataService.ds.REF_CURRENT_USER.child("activity").observe(.value, with: { (snapshot) in
+            
+            self.streakArr = []
+            
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                
+                for snap in snapshot {
+                    self.streakArr.append(snap.key)
+                    print(snap.key)
+                    
+                }
+                
+            }
+            
+            if self.streakArr.count > 1 {
+                let totalDays = self.streakArr.count
+                let today = totalDays - 1
+                let lastDay = totalDays - 2
+                
+                let diff = Int(self.streakArr[today])! - Int(self.streakArr[lastDay])!
+                
+                print("JAMES diff is: \(diff)")
+                
+                if diff == 1 {
+                    let addToStreak = self.currentStreak + 1
+                    print(addToStreak)
+                    //DataService.ds.REF_CURRENT_USER.child("streak").setValue(self.currentStreak + 1)
+                } else {
+                    //DataService.ds.REF_CURRENT_USER.child("streak").setValue(0)
+                }
+            } else {
+                
+            }
+            
+        })
+        
         DataService.ds.REF_GOALS.observe(.value, with: { (snapshot) in
             
             self.goals = []
@@ -81,7 +103,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.completionsArr = []
             
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                print("JAMES goals \(snapshot)")
                 for snap in snapshot {
                     if let goalDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
@@ -153,16 +174,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let cell = indexPath.row
-        
-        let delta = goals[cell].delta
-        
-        let newPoints:Int = self.points + delta
-        
-        DataService.ds.REF_CURRENT_USER.setValue(["kaizen-points": newPoints])
-
-        
         
    }
     

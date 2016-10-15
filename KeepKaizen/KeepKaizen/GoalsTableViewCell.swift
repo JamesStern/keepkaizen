@@ -63,6 +63,8 @@ class GoalsTableViewCell: UITableViewCell {
             if let _ = snapshot.value as? NSNull {
                 self.completionRef.setValue(true)
                 DataService.ds.REF_GOALS.child(self.goal.goalKey).child("completions").setValue(currentCompletions + 1)
+                let newPoints = points + self.goal.delta
+                DataService.ds.REF_CURRENT_USER.child("kaizen-points").setValue(newPoints)
             } else {
                 let alertController = UIAlertController(title: "Oops!", message: "You've already completed this goal today.", preferredStyle: .alert)
                 

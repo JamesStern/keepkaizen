@@ -55,7 +55,7 @@ class SignInViewController: UIViewController {
                         } else {
                             print("User created with email")
                             if let user = user {
-                                let userData = ["email": email, "kaizen-points": 0] as [String : Any]
+                                let userData = ["email": email, "kaizen-points": 0, "streak":1] as [String : Any]
                                 self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
