@@ -243,15 +243,25 @@
                                             </segue>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="evT-2s-NXT" customClass="LineChartView" customModule="Charts">
+                                        <color key="backgroundColor" red="0.14117647059999999" green="0.13725490200000001" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="fvk-kZ-XdZ"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.13725490196078433" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="v2d-9f-t1m" firstAttribute="leading" secondItem="ej1-4w-u4P" secondAttribute="leading" constant="16" id="2iD-D6-Bp2"/>
+                                    <constraint firstAttribute="trailing" secondItem="evT-2s-NXT" secondAttribute="trailing" id="6X9-Go-LSE"/>
                                     <constraint firstItem="FnH-kx-4Xd" firstAttribute="centerX" secondItem="ej1-4w-u4P" secondAttribute="centerX" id="AAo-Uf-KrX"/>
                                     <constraint firstItem="tZ8-uq-Bdf" firstAttribute="top" secondItem="FnH-kx-4Xd" secondAttribute="bottom" constant="28" id="Bxn-oW-Qam"/>
                                     <constraint firstItem="3ah-lb-bRt" firstAttribute="top" secondItem="tZ8-uq-Bdf" secondAttribute="bottom" constant="3" id="CRd-1o-A4o"/>
                                     <constraint firstItem="ODf-H5-cN5" firstAttribute="centerX" secondItem="3ah-lb-bRt" secondAttribute="centerX" id="DPH-FH-XfW"/>
+                                    <constraint firstItem="evT-2s-NXT" firstAttribute="leading" secondItem="ej1-4w-u4P" secondAttribute="leading" id="Kma-1s-O8c"/>
                                     <constraint firstItem="v2d-9f-t1m" firstAttribute="top" secondItem="ej1-4w-u4P" secondAttribute="top" constant="27" id="UX3-lz-LWP"/>
+                                    <constraint firstItem="evT-2s-NXT" firstAttribute="top" secondItem="ODf-H5-cN5" secondAttribute="bottom" constant="20" id="ZJg-Nv-7G7"/>
+                                    <constraint firstAttribute="bottom" secondItem="evT-2s-NXT" secondAttribute="bottom" constant="8" id="bRb-sD-gW9"/>
                                     <constraint firstItem="FnH-kx-4Xd" firstAttribute="top" secondItem="ej1-4w-u4P" secondAttribute="top" constant="25" id="h33-qX-kha"/>
                                     <constraint firstItem="3ah-lb-bRt" firstAttribute="centerX" secondItem="FnH-kx-4Xd" secondAttribute="centerX" id="j5I-Uq-Rbo"/>
                                     <constraint firstItem="ODf-H5-cN5" firstAttribute="top" secondItem="3ah-lb-bRt" secondAttribute="bottom" constant="20" id="jqh-m3-fc4"/>
@@ -354,6 +364,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mbO-lt-Wgh"/>
                     <connections>
+                        <outlet property="chartView" destination="evT-2s-NXT" id="d4Q-pb-Ow1"/>
                         <outlet property="completions" destination="JXq-5b-EK7" id="1Mh-rq-q72"/>
                         <outlet property="goalsCount" destination="ce6-Qd-G87" id="n7i-Wq-AgF"/>
                         <outlet property="goalsTable" destination="rDO-WE-SJO" id="Q5C-Wl-r3Z"/>
