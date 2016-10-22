@@ -243,22 +243,35 @@
                                             </segue>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="evT-2s-NXT" customClass="LineChartView" customModule="Charts">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evT-2s-NXT">
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add goals and complete them for at least two days to generate your completion graph!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz5-Ll-3l8">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="260" id="1ge-mJ-ro6"/>
+                                                    <constraint firstAttribute="height" constant="87" id="pMa-TH-W1q"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.14117647059999999" green="0.13725490200000001" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="rz5-Ll-3l8" firstAttribute="centerX" secondItem="evT-2s-NXT" secondAttribute="centerX" id="NEU-yC-FRv"/>
                                             <constraint firstAttribute="height" constant="250" id="fvk-kZ-XdZ"/>
+                                            <constraint firstItem="rz5-Ll-3l8" firstAttribute="centerY" secondItem="evT-2s-NXT" secondAttribute="centerY" id="s8R-Eu-69t"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.13725490196078433" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="v2d-9f-t1m" firstAttribute="leading" secondItem="ej1-4w-u4P" secondAttribute="leading" constant="16" id="2iD-D6-Bp2"/>
-                                    <constraint firstAttribute="trailing" secondItem="evT-2s-NXT" secondAttribute="trailing" id="6X9-Go-LSE"/>
+                                    <constraint firstAttribute="trailing" secondItem="evT-2s-NXT" secondAttribute="trailing" constant="10" id="6X9-Go-LSE"/>
                                     <constraint firstItem="FnH-kx-4Xd" firstAttribute="centerX" secondItem="ej1-4w-u4P" secondAttribute="centerX" id="AAo-Uf-KrX"/>
                                     <constraint firstItem="tZ8-uq-Bdf" firstAttribute="top" secondItem="FnH-kx-4Xd" secondAttribute="bottom" constant="28" id="Bxn-oW-Qam"/>
                                     <constraint firstItem="3ah-lb-bRt" firstAttribute="top" secondItem="tZ8-uq-Bdf" secondAttribute="bottom" constant="3" id="CRd-1o-A4o"/>
                                     <constraint firstItem="ODf-H5-cN5" firstAttribute="centerX" secondItem="3ah-lb-bRt" secondAttribute="centerX" id="DPH-FH-XfW"/>
-                                    <constraint firstItem="evT-2s-NXT" firstAttribute="leading" secondItem="ej1-4w-u4P" secondAttribute="leading" id="Kma-1s-O8c"/>
+                                    <constraint firstItem="evT-2s-NXT" firstAttribute="leading" secondItem="ej1-4w-u4P" secondAttribute="leading" constant="10" id="Kma-1s-O8c"/>
                                     <constraint firstItem="v2d-9f-t1m" firstAttribute="top" secondItem="ej1-4w-u4P" secondAttribute="top" constant="27" id="UX3-lz-LWP"/>
                                     <constraint firstItem="evT-2s-NXT" firstAttribute="top" secondItem="ODf-H5-cN5" secondAttribute="bottom" constant="20" id="ZJg-Nv-7G7"/>
                                     <constraint firstAttribute="bottom" secondItem="evT-2s-NXT" secondAttribute="bottom" constant="8" id="bRb-sD-gW9"/>
@@ -321,20 +334,28 @@
                                                         <constraint firstAttribute="height" constant="40" id="Lso-n0-hBN"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 Completions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ0-R0-lgL" userLabel="Comp Label">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Dyb-Ie-z74" firstAttribute="top" secondItem="2LF-ig-WnA" secondAttribute="bottom" constant="8" id="Ad1-Tx-29w"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cRN-0i-NPm" secondAttribute="trailing" constant="15" id="Czd-iD-QzX"/>
+                                                <constraint firstItem="mQ0-R0-lgL" firstAttribute="top" secondItem="FJp-HB-wJh" secondAttribute="topMargin" constant="32" id="EWo-Fb-W0P"/>
                                                 <constraint firstItem="u1T-4D-eQd" firstAttribute="top" secondItem="FJp-HB-wJh" secondAttribute="topMargin" constant="6" id="KPC-XN-UZ8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mQ0-R0-lgL" secondAttribute="trailing" constant="15" id="SZb-kO-R3x"/>
                                                 <constraint firstItem="u1T-4D-eQd" firstAttribute="leading" secondItem="FJp-HB-wJh" secondAttribute="leadingMargin" constant="5" id="Ti2-xe-sna"/>
                                                 <constraint firstItem="2LF-ig-WnA" firstAttribute="top" secondItem="FJp-HB-wJh" secondAttribute="topMargin" id="keA-a5-haP"/>
                                                 <constraint firstItem="2LF-ig-WnA" firstAttribute="leading" secondItem="FJp-HB-wJh" secondAttribute="leadingMargin" constant="60" id="pj4-UZ-MaW"/>
                                                 <constraint firstItem="Dyb-Ie-z74" firstAttribute="leading" secondItem="FJp-HB-wJh" secondAttribute="leadingMargin" constant="60" id="tP4-Fc-5wQ"/>
-                                                <constraint firstItem="cRN-0i-NPm" firstAttribute="top" secondItem="FJp-HB-wJh" secondAttribute="topMargin" constant="11" id="umM-8K-aWJ"/>
+                                                <constraint firstItem="cRN-0i-NPm" firstAttribute="top" secondItem="FJp-HB-wJh" secondAttribute="topMargin" id="umM-8K-aWJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <gestureRecognizers/>
                                         <connections>
+                                            <outlet property="compLabel" destination="mQ0-R0-lgL" id="k7i-ti-G6Q"/>
                                             <outlet property="deltaLabel" destination="cRN-0i-NPm" id="P3V-l7-4On"/>
                                             <outlet property="freqLabel" destination="Dyb-Ie-z74" id="tNm-5S-agY"/>
                                             <outlet property="goalIcon" destination="u1T-4D-eQd" id="Lfj-hO-j7e"/>
@@ -364,11 +385,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="mbO-lt-Wgh"/>
                     <connections>
-                        <outlet property="chartView" destination="evT-2s-NXT" id="d4Q-pb-Ow1"/>
                         <outlet property="completions" destination="JXq-5b-EK7" id="1Mh-rq-q72"/>
                         <outlet property="goalsCount" destination="ce6-Qd-G87" id="n7i-Wq-AgF"/>
                         <outlet property="goalsTable" destination="rDO-WE-SJO" id="Q5C-Wl-r3Z"/>
                         <outlet property="kaizenPts" destination="3ah-lb-bRt" id="TCu-Wv-saB"/>
+                        <outlet property="lineChart" destination="evT-2s-NXT" id="EFn-26-yez"/>
+                        <outlet property="noGraphLabel" destination="rz5-Ll-3l8" id="mkM-sl-cec"/>
                         <outlet property="streak" destination="vla-qe-UZJ" id="cG4-ZW-9w7"/>
                         <segue destination="CZc-5H-H67" kind="show" identifier="addNew" id="X6l-AC-Qwx"/>
                     </connections>
@@ -475,18 +497,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="center" tableViewCell="E0h-1x-707" id="8VB-Ym-q40">
                                             <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlm-lE-PQI">
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                             <color key="backgroundColor" red="0.14117647059999999" green="0.13725490200000001" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="hlm-lE-PQI" firstAttribute="top" secondItem="8VB-Ym-q40" secondAttribute="topMargin" constant="3" id="VnF-j4-PB5"/>
-                                                <constraint firstItem="hlm-lE-PQI" firstAttribute="leading" secondItem="8VB-Ym-q40" secondAttribute="leadingMargin" constant="10" id="VuE-lK-WYM"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="3Xp-M3-R3R">
@@ -516,15 +527,21 @@
                                             <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reset Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gB-Qh-puG">
-                                                    <frame key="frameInset" minX="17" minY="11" width="84" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9f6-xd-6c7">
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <state key="normal" title="Reset Points">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="resetData:" destination="TmB-lN-Jcj" eventType="touchUpInside" id="zkq-au-1Ji"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.14117647059999999" green="0.13725490200000001" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="9f6-xd-6c7" firstAttribute="leading" secondItem="3eT-Ip-mf7" secondAttribute="leading" constant="16" id="IYt-tp-enO"/>
+                                                <constraint firstItem="9f6-xd-6c7" firstAttribute="top" secondItem="3eT-Ip-mf7" secondAttribute="top" constant="3" id="pzD-MI-0AQ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Wqo-pv-mYN">
@@ -534,15 +551,21 @@
                                             <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clear All Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGN-hk-47q">
-                                                    <frame key="frameInset" minX="17" minY="11" width="122" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zy-dQ-veE">
+                                                    <frame key="frameInset" minX="13" minY="5" width="131" height="36"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <state key="normal" title="Clear All Goals">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="clearGoals:" destination="TmB-lN-Jcj" eventType="touchUpInside" id="UqW-ZM-JEt"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.14117647059999999" green="0.13725490200000001" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="7zy-dQ-veE" firstAttribute="leading" secondItem="LvN-m5-UXZ" secondAttribute="leading" constant="16" id="ug2-YP-5Uv"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Zs8-9l-QyT">
@@ -579,15 +602,22 @@
                                             <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DELETE ACCOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deA-HH-DVw">
-                                                    <frame key="frameInset" minX="17" minY="11" width="151" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOy-Cm-oQf">
+                                                    <frame key="frameInset" minX="17" minY="8" width="132" height="30"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
-                                                    <color key="textColor" red="0.92549019610000005" green="0.0" blue="0.21252489281666667" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <state key="normal" title="DELETE ACCOUNT">
+                                                        <color key="titleColor" red="0.92549019610000005" green="0.0" blue="0.2125248928" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteUser:" destination="TmB-lN-Jcj" eventType="touchUpInside" id="iub-uo-CFy"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.14117647059999999" green="0.13725490200000001" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="kOy-Cm-oQf" firstAttribute="top" secondItem="AAx-eV-Jcq" secondAttribute="top" constant="8" id="HG9-zs-LcB"/>
+                                                <constraint firstItem="kOy-Cm-oQf" firstAttribute="leading" secondItem="AAx-eV-Jcq" secondAttribute="leading" constant="16" id="iT3-hR-r0Y"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="pyW-SR-f12">
@@ -817,11 +847,11 @@
                                 </connections>
                             </button>
                             <pickerView hidden="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QI4-nC-Sf0">
-                                <frame key="frameInset" minY="518" height="216" maxX="-0.5"/>
+                                <frame key="frameInset" minY="518" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <pickerView hidden="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gg2-Ae-fet">
-                                <frame key="frameInset" minY="519" height="216" maxX="-0.5"/>
+                                <frame key="frameInset" minY="519" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKA-HH-4pE">

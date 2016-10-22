@@ -14,6 +14,7 @@ class GoalsTableViewCell: UITableViewCell {
     @IBOutlet weak var goalsLabel: UILabel!
     @IBOutlet weak var freqLabel: UILabel!
     @IBOutlet weak var deltaLabel: UILabel!
+    @IBOutlet weak var compLabel: UILabel!
     @IBOutlet weak var goalIcon: UIImageView!
     @IBOutlet weak var goalView: UIView!
     
@@ -42,6 +43,7 @@ class GoalsTableViewCell: UITableViewCell {
         self.goalsLabel.text = goal.content
         self.freqLabel.text = goal.freq
         self.deltaLabel.text = String(goal.delta)
+        self.compLabel.text = "\(String(goal.completions)) completions"
         
         let catImage = goal.category.uppercased()
         self.goalIcon.image = UIImage(named: "\(catImage).png")

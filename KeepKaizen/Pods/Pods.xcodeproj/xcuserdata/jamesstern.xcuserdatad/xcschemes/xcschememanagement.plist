@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftChart.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftKeychainWrapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9D33DC207A219BF0122CB701A40BA36D</key>
+		<key>4DDAA938FC7E8F17CC34643613338B20</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B04A1041452B287FECAFD624FA25ED85</key>
+		<key>6D0C9931BB522EA19F45DA976316163E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CD2EBEF7416D524502F61DB5E5FB9913</key>
+		<key>8EE047F62A507EABCE4FAC8517FCC2A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F4C8DA9A2DF8BA370D3D44A09AD307AB</key>
+		<key>BE9B25A918C001435725374D6F01F53C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D5D09649BEF22E72A8FD1C769D1C7F02</key>
 		<dict>
 			<key>primary</key>
 			<true/>

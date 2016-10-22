@@ -13,8 +13,6 @@
 		6A5CA06E1DAAEAA300982C9D /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA06D1DAAEAA300982C9D /* SideMenuVC.swift */; };
 		6A5CA0721DAAFD8200982C9D /* SignOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA0711DAAFD8200982C9D /* SignOutVC.swift */; };
 		6A5CA0761DAB0E9200982C9D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA0751DAB0E9200982C9D /* DataService.swift */; };
-		6A7F93501DB2DE0A00CDD592 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7F934F1DB2DE0A00CDD592 /* Charts.framework */; };
-		6A7F93511DB2DE0A00CDD592 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7F934F1DB2DE0A00CDD592 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A94FDA11D9C300E00C923C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94FDA01D9C300E00C923C2 /* AppDelegate.swift */; };
 		6A94FDA31D9C300E00C923C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94FDA21D9C300E00C923C2 /* ViewController.swift */; };
 		6A94FDA81D9C300E00C923C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A94FDA71D9C300E00C923C2 /* Assets.xcassets */; };
@@ -35,7 +33,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6A7F93511DB2DE0A00CDD592 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,8 +50,6 @@
 		6A5CA06D1DAAEAA300982C9D /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		6A5CA0711DAAFD8200982C9D /* SignOutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutVC.swift; sourceTree = "<group>"; };
 		6A5CA0751DAB0E9200982C9D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		6A7F93431DB2DD6E00CDD592 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "/Users/jamesstern/Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<absolute>"; };
-		6A7F934F1DB2DE0A00CDD592 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A94FD9D1D9C300E00C923C2 /* KeepKaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepKaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A94FDA01D9C300E00C923C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A94FDA21D9C300E00C923C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +70,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A21870475B2A7475199E6A72 /* Pods_KeepKaizen.framework in Frameworks */,
-				6A7F93501DB2DE0A00CDD592 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +126,6 @@
 		6A94FD941D9C300E00C923C2 = {
 			isa = PBXGroup;
 			children = (
-				6A7F934F1DB2DE0A00CDD592 /* Charts.framework */,
-				6A7F93431DB2DD6E00CDD592 /* Charts.xcodeproj */,
 				6A94FD9F1D9C300E00C923C2 /* KeepKaizen */,
 				6A94FD9E1D9C300E00C923C2 /* Products */,
 				47E46A288FF235A933C6C44F /* Pods */,
