@@ -63,22 +63,35 @@ class GoalsTableViewCell: UITableViewCell {
         
         completionRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? NSNull {
-                self.completionRef.setValue(true)
-                DataService.ds.REF_GOALS.child(self.goal.goalKey).child("completions").setValue(currentCompletions + 1)
                 
-                if self.goal.deltaSign == 0 {
-                    DataService.ds.REF_GOALS.child(self.goal.goalKey).child("baseline").setValue(self.goal.baseline + self.goal.delta)
-                } else {
+                let alertController = UIAlertController(title: "Complete: \(self.goal.content)", message: "Tap OK to complete your goal.", preferredStyle: .alert)
+                
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                    self.completionRef.setValue(true)
+                    DataService.ds.REF_GOALS.child(self.goal.goalKey).child("completions").setValue(currentCompletions + 1)
                     
-                    if self.goal.baseline == 0 {
-                        
+                    if self.goal.deltaSign == 0 {
+                        DataService.ds.REF_GOALS.child(self.goal.goalKey).child("baseline").setValue(self.goal.baseline + self.goal.delta)
                     } else {
-                        DataService.ds.REF_GOALS.child(self.goal.goalKey).child("baseline").setValue(self.goal.baseline - self.goal.delta)
+                        
+                        if self.goal.baseline == 0 {
+                            
+                        } else {
+                            DataService.ds.REF_GOALS.child(self.goal.goalKey).child("baseline").setValue(self.goal.baseline - self.goal.delta)
+                        }
+                        
+                        
                     }
-                    
-                    
                 }
                 
+                let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (action:UIAlertAction) in
+                    print("Alert dismissed");
+                }
+                
+                
+                alertController.addAction(OKAction)
+                alertController.addAction(cancelAction)
+                self.delagate?.present(alertController, animated: true, completion:nil)
                 let newPoints = points + self.goal.baseline
                 DataService.ds.REF_CURRENT_USER.child("kaizen-points").setValue(newPoints)
             } else {
