@@ -12,12 +12,24 @@ import SwiftKeychainWrapper
 
 class SideMenuVC: UITableViewController {
 
+    @IBOutlet weak var userEmail: UILabel!
+    
     @IBAction func signOutTapped(_ sender: AnyObject) {
         //performSegue(withIdentifier: "goToSignOut", sender: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        DataService.ds.REF_CURRENT_USER.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let email = value?["email"] as! String
+            self.userEmail.text = email
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
 
     @IBAction func resetData(_ sender: AnyObject) {
