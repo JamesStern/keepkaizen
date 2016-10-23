@@ -62,6 +62,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 series.area = true
                 self.chart.lineWidth =  4
                 self.chart.labelColor = UIColor.white
+                self.chart.minY = 0
                 self.chart.add(series)
                 
                 self.lineChart.addSubview(self.chart)
