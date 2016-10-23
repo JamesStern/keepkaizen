@@ -18,6 +18,7 @@ class Goal {
     private var _delta:Int!
     private var _deltaSign:Int!
     private var _completions:Int!
+    private var _baseline:Int!
     private var _goalKey:String!
     private var _goalRef:FIRDatabaseReference!
     
@@ -49,11 +50,15 @@ class Goal {
         return _completions
     }
     
+    var baseline: Int {
+        return _baseline
+    }
+    
     var goalKey: String {
         return _goalKey
     }
     
-    init(content:String, addedByUser:String, freq:String, category:String, delta:Int, deltaSign:Int, completions:Int) {
+    init(content:String, addedByUser:String, freq:String, category:String, delta:Int, deltaSign:Int, completions:Int, baseline:Int) {
 
         self._content = content
         self._addedByUser = addedByUser
@@ -62,6 +67,7 @@ class Goal {
         self._delta = delta
         self._deltaSign = deltaSign
         self._completions = completions
+        self._baseline = baseline
         
     }
     
@@ -110,6 +116,12 @@ class Goal {
             self._completions = completions
         } else {
             self._completions = 0
+        }
+        if let baseline = goalData["baseline"] as? Int {
+            
+            self._baseline = baseline
+        } else {
+            self._baseline = 0
         }
         
         _goalRef = DataService.ds.REF_GOALS.child(_goalKey)

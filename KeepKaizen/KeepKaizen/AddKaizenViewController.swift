@@ -20,6 +20,8 @@ class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var frequencyPicker: UIPickerView!
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var freqLabel: UILabel!
+    @IBOutlet weak var baseline: UITextField!
     
     var categories = ["Career", "Dining", "Education", "Finance", "Fitness",  "Health", "Personal", "Recreation", "Time" ]
     var freqs = ["Daily", "Weekly", "Monthly"]
@@ -75,6 +77,8 @@ class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPicke
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView.tag == 1){
             frequencyButton.setTitle(freqs[row], for: UIControlState.normal)
+            freqLabel.isHidden = false
+            freqLabel.text = "\(freqs[row]) by"
             frequencyPicker.isHidden = true
             
             addButton.isHidden = false
@@ -118,12 +122,14 @@ class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPicke
                 if let goalContent = goalText.text {
                     
                     let delta = Int(deltaLabel.text!)!
+                    let baseline = Int(self.baseline.text!)!
                     
                     let goal: Dictionary<String, AnyObject> = [
                         "content": goalContent as AnyObject,
                         "addedByUser": user.uid as AnyObject,
                         "freq": (frequencyButton.titleLabel?.text)! as AnyObject,
                         "category": (categoryButton.titleLabel?.text)! as AnyObject,
+                        "baseline": baseline as AnyObject,
                         "delta": (delta as AnyObject),
                         "deltaSign": (Int(deltaSign.selectedIndex) as AnyObject)
                         

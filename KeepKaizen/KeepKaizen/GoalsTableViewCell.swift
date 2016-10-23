@@ -42,7 +42,7 @@ class GoalsTableViewCell: UITableViewCell {
         
         self.goalsLabel.text = goal.content
         self.freqLabel.text = goal.freq
-        self.deltaLabel.text = String(goal.delta)
+        self.deltaLabel.text = String(goal.baseline)
         self.compLabel.text = "\(String(goal.completions)) completions"
         
         let catImage = goal.category.uppercased()
@@ -65,7 +65,14 @@ class GoalsTableViewCell: UITableViewCell {
             if let _ = snapshot.value as? NSNull {
                 self.completionRef.setValue(true)
                 DataService.ds.REF_GOALS.child(self.goal.goalKey).child("completions").setValue(currentCompletions + 1)
-                let newPoints = points + self.goal.delta
+                
+                if self.goal.deltaSign == 0 {
+                    DataService.ds.REF_GOALS.child(self.goal.goalKey).child("baseline").setValue(self.goal.baseline + self.goal.delta)
+                } else {
+                    DataService.ds.REF_GOALS.child(self.goal.goalKey).child("baseline").setValue(self.goal.baseline - self.goal.delta)
+                }
+                
+                let newPoints = points + self.goal.baseline
                 DataService.ds.REF_CURRENT_USER.child("kaizen-points").setValue(newPoints)
             } else {
                 let alertController = UIAlertController(title: "Oops!", message: "You've already completed this goal today.", preferredStyle: .alert)
