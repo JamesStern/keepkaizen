@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var dailyCompsCount:[Float]! = []
     var dailyCompsDict:Dictionary<String, Any>!
     var chart:Chart!
+    var deleteGoalIndexPath:NSIndexPath! = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -221,7 +222,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-   }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteGoalIndexPath = indexPath as NSIndexPath!
+            let goalToDelete = goals[indexPath.row]
+            confirmDelete(goal: goalToDelete)
+        }
+    }
+    func confirmDelete(goal: Goal) {
+        let alert = UIAlertController(title: "Delete Goal", message: "Are you sure you want to permanently delete \(goal.content)?", preferredStyle: .actionSheet)
+        
+        let DeleteAction = UIAlertAction(title: "Delete", style: .destructive) { (action:UIAlertAction) in
+            print("JAMES: GOAL DELETED \(goal.goalKey)")
+            DataService.ds.REF_GOALS.child(goal.goalKey).removeValue()
+        }
+        let CancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction) in
+            print("Alert dismissed");
+        }
+
+        
+        alert.addAction(DeleteAction)
+        alert.addAction(CancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     
 
 }
