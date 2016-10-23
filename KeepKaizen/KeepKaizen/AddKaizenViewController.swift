@@ -122,7 +122,14 @@ class AddKaizenViewController: UIViewController, UIPickerViewDataSource, UIPicke
                 if let goalContent = goalText.text {
                     
                     let delta = Int(deltaLabel.text!)!
-                    let baseline = Int(self.baseline.text!)!
+                    let baseline:Int!
+                    
+                    if self.baseline.text != "" {
+                        baseline = Int(self.baseline.text!)!
+                    } else {
+                        baseline = 0
+                    }
+                    
                     
                     let goal: Dictionary<String, AnyObject> = [
                         "content": goalContent as AnyObject,

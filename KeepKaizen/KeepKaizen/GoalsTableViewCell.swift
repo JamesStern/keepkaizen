@@ -69,7 +69,14 @@ class GoalsTableViewCell: UITableViewCell {
                 if self.goal.deltaSign == 0 {
                     DataService.ds.REF_GOALS.child(self.goal.goalKey).child("baseline").setValue(self.goal.baseline + self.goal.delta)
                 } else {
-                    DataService.ds.REF_GOALS.child(self.goal.goalKey).child("baseline").setValue(self.goal.baseline - self.goal.delta)
+                    
+                    if self.goal.baseline == 0 {
+                        
+                    } else {
+                        DataService.ds.REF_GOALS.child(self.goal.goalKey).child("baseline").setValue(self.goal.baseline - self.goal.delta)
+                    }
+                    
+                    
                 }
                 
                 let newPoints = points + self.goal.baseline
