@@ -180,7 +180,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func addBtn(_ sender: AnyObject) {
-        performSegue(withIdentifier: "addNew", sender:  sender)
+        if goals.count > 2 {
+            let alertController = UIAlertController(title: "Upgrade to Pro", message: "Upgrade to the Pro Version to add more than three goals.", preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                print("Alert dismissed");
+            }
+            
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        } else {
+            performSegue(withIdentifier: "addNew", sender:  sender)
+        }
+        
     }
     
     

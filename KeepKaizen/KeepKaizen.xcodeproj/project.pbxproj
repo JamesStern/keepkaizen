@@ -13,6 +13,7 @@
 		6A5CA06E1DAAEAA300982C9D /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA06D1DAAEAA300982C9D /* SideMenuVC.swift */; };
 		6A5CA0721DAAFD8200982C9D /* SignOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA0711DAAFD8200982C9D /* SignOutVC.swift */; };
 		6A5CA0761DAB0E9200982C9D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA0751DAB0E9200982C9D /* DataService.swift */; };
+		6A86F82C1DBD2FB200526709 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A86F82B1DBD2FB200526709 /* StoreKit.framework */; };
 		6A94FDA11D9C300E00C923C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94FDA01D9C300E00C923C2 /* AppDelegate.swift */; };
 		6A94FDA31D9C300E00C923C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94FDA21D9C300E00C923C2 /* ViewController.swift */; };
 		6A94FDA81D9C300E00C923C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A94FDA71D9C300E00C923C2 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		6A5CA06D1DAAEAA300982C9D /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		6A5CA0711DAAFD8200982C9D /* SignOutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutVC.swift; sourceTree = "<group>"; };
 		6A5CA0751DAB0E9200982C9D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		6A86F82B1DBD2FB200526709 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		6A94FD9D1D9C300E00C923C2 /* KeepKaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepKaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A94FDA01D9C300E00C923C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A94FDA21D9C300E00C923C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A21870475B2A7475199E6A72 /* Pods_KeepKaizen.framework in Frameworks */,
+				6A86F82C1DBD2FB200526709 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +166,7 @@
 		C628FE598EDF33A75855DCAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A86F82B1DBD2FB200526709 /* StoreKit.framework */,
 				17C827F3541608F4A5F836E0 /* Pods_KeepKaizen.framework */,
 			);
 			name = Frameworks;
@@ -208,6 +212,9 @@
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.Keychain = {
 								enabled = 1;
 							};
