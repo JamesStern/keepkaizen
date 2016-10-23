@@ -14,6 +14,8 @@
 		6A5CA0721DAAFD8200982C9D /* SignOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA0711DAAFD8200982C9D /* SignOutVC.swift */; };
 		6A5CA0761DAB0E9200982C9D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5CA0751DAB0E9200982C9D /* DataService.swift */; };
 		6A86F82C1DBD2FB200526709 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A86F82B1DBD2FB200526709 /* StoreKit.framework */; };
+		6A86F82E1DBD32E100526709 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A86F82D1DBD32E100526709 /* IAPHelper.swift */; };
+		6A86F8301DBD331900526709 /* KeepKaizenProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A86F82F1DBD331900526709 /* KeepKaizenProducts.swift */; };
 		6A94FDA11D9C300E00C923C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94FDA01D9C300E00C923C2 /* AppDelegate.swift */; };
 		6A94FDA31D9C300E00C923C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94FDA21D9C300E00C923C2 /* ViewController.swift */; };
 		6A94FDA81D9C300E00C923C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A94FDA71D9C300E00C923C2 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		6A5CA0711DAAFD8200982C9D /* SignOutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutVC.swift; sourceTree = "<group>"; };
 		6A5CA0751DAB0E9200982C9D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		6A86F82B1DBD2FB200526709 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6A86F82D1DBD32E100526709 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		6A86F82F1DBD331900526709 /* KeepKaizenProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeepKaizenProducts.swift; sourceTree = "<group>"; };
 		6A94FD9D1D9C300E00C923C2 /* KeepKaizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepKaizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A94FDA01D9C300E00C923C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A94FDA21D9C300E00C923C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				6A5CA0681DAAE17200982C9D /* Constants.swift */,
+				6A86F82D1DBD32E100526709 /* IAPHelper.swift */,
+				6A86F82F1DBD331900526709 /* KeepKaizenProducts.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -308,10 +314,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A94FDA31D9C300E00C923C2 /* ViewController.swift in Sources */,
+				6A86F82E1DBD32E100526709 /* IAPHelper.swift in Sources */,
 				6A94FDA11D9C300E00C923C2 /* AppDelegate.swift in Sources */,
 				6AF639C11D9C670200121AD6 /* AddKaizenViewController.swift in Sources */,
 				6A5CA0761DAB0E9200982C9D /* DataService.swift in Sources */,
 				6AF1D3841D9F0F53004E3641 /* GoalsTableViewCell.swift in Sources */,
+				6A86F8301DBD331900526709 /* KeepKaizenProducts.swift in Sources */,
 				6A5CA0721DAAFD8200982C9D /* SignOutVC.swift in Sources */,
 				6A5CA06E1DAAEAA300982C9D /* SideMenuVC.swift in Sources */,
 				6A5CA0661DAACD7400982C9D /* SignInViewController.swift in Sources */,
