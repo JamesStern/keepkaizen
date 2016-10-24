@@ -11,10 +11,11 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 import SwiftChart
+import StoreKit
 
 
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, Dimmable {
     
     @IBOutlet weak var kaizenPts: UILabel!
     @IBOutlet weak var completions: UILabel!
@@ -35,6 +36,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var dailyCompsDict:Dictionary<String, Any>!
     var chart:Chart!
     var deleteGoalIndexPath:NSIndexPath! = nil
+    var pro = [SKProduct]()
+    
+    let dimLevel: CGFloat = 0.5
+    let dimSpeed: Double = 0.5
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +78,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         startObservingDB ()
+        
+        KeepKaizenProducts.store.requestProducts{success, products in
+            if success {
+                self.pro = products!
+            }
+        }
 
 
     }
@@ -181,14 +192,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func addBtn(_ sender: AnyObject) {
         if goals.count > 2 {
-            let alertController = UIAlertController(title: "Upgrade to Pro", message: "Upgrade to the Pro Version to add more than three goals.", preferredStyle: .alert)
             
-            let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
-                print("Alert dismissed");
+            if KeepKaizenProducts.store.isProductPurchased("KeepKaizen_Pro") != true {
+                
+                let alertController = UIAlertController(title: "Upgrade to Pro", message: "Upgrade to the Pro Version to add more than three goals.", preferredStyle: .alert)
+                
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                    KeepKaizenProducts.store.buyProduct(self.pro[0])
+                }
+                let cancelAction = UIAlertAction(title: "Not Now", style: .default) { (action:UIAlertAction) in
+                    print("Alert dismissed");
+                }
+                
+                alertController.addAction(OKAction)
+                alertController.addAction(cancelAction)
+                self.present(alertController, animated: true, completion:nil)
+            } else {
+                performSegue(withIdentifier: "addNew", sender:  sender)
             }
             
-            alertController.addAction(OKAction)
-            self.present(alertController, animated: true, completion:nil)
         } else {
             performSegue(withIdentifier: "addNew", sender:  sender)
         }
@@ -259,6 +281,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         alert.addAction(CancelAction)
         
         self.present(alert, animated: true, completion: nil)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.goalsTable.reloadData()
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        dim(direction: .In, alpha: dimLevel, speed: dimSpeed)
+    }
+    
+    @IBAction func unwindFromSecondary(segue: UIStoryboardSegue) {
+        dim(direction: .Out, speed: dimSpeed)
     }
     
 
