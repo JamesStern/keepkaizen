@@ -116,6 +116,10 @@ class SideMenuVC: UITableViewController {
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion:nil)
     }
+    
+    @IBAction func restoreIAP(_ sender: AnyObject) {
+        KeepKaizenProducts.store.restorePurchases()
+    }
 
 
 }

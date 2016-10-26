@@ -688,7 +688,24 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.89999997615814209" contentMode="center" tableViewCell="pyW-SR-f12" id="vqr-od-Yke">
                                             <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ0-oz-c7A">
+                                                    <frame key="frameInset" minX="18" minY="6" width="132" height="30"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                                                    <state key="normal" title="RESTORE PURCHASE">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteUser:" destination="TmB-lN-Jcj" eventType="touchUpInside" id="O54-eb-nYg"/>
+                                                        <action selector="restoreIAP:" destination="TmB-lN-Jcj" eventType="touchUpInside" id="5KV-dr-5DD"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                             <color key="backgroundColor" red="0.14117647059999999" green="0.13725490200000001" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="UZ0-oz-c7A" firstAttribute="top" secondItem="vqr-od-Yke" secondAttribute="top" constant="8" id="blE-9u-drn"/>
+                                                <constraint firstItem="UZ0-oz-c7A" firstAttribute="leading" secondItem="vqr-od-Yke" secondAttribute="leading" constant="16" id="qcG-k3-yHd"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="fqT-7t-Hou">
