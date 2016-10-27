@@ -24,7 +24,7 @@ import Foundation
 
 public struct KeepKaizenProducts {
     
-    public static let Pro = "KeepKaizen_Pro"
+    public static let Pro = "KeepKaizen_Pro_"
     
     fileprivate static let productIdentifiers: Set<ProductIdentifier> = [KeepKaizenProducts.Pro]
     

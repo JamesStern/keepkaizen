@@ -84,6 +84,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.pro = products!
             }
         }
+        
 
 
     }
@@ -193,9 +194,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func addBtn(_ sender: AnyObject) {
         if goals.count > 2 {
             
-            if KeepKaizenProducts.store.isProductPurchased("KeepKaizen_Pro") != true {
+            if KeepKaizenProducts.store.isProductPurchased("KeepKaizen_Pro_") != true {
                 
-                let alertController = UIAlertController(title: "Upgrade to Pro", message: "Upgrade to the Pro Version to add more than three goals.", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Upgrade to Pro for $0.99", message: "Upgrade to the Pro Version to add more than three goals.", preferredStyle: .alert)
                 
                 let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
                     KeepKaizenProducts.store.buyProduct(self.pro[0])
